@@ -18,7 +18,7 @@ events and sessions time and often.
 
 `Note: Anyone with interest can contribute`
 
-# Contributers
+# Contributors
 <a href="https://github.com/noskofficial/NOSK-Website/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=noskofficial/NOSK-Website" />
 </a>
