@@ -52,7 +52,22 @@ img{
 
 .social-media{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.what-is-nosk{
+    background-color: #2e2459;
+    color: #ffffff;
+}
+.sub-header{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    font-weight: 800;
+    border-bottom: 5px solid #ffffff;
 }
 
 /* mobile screen */
@@ -60,6 +75,9 @@ img{
     .our-info{
         display: flex;
         flex-direction: column;
+    }
+    .social-media{
+        justify-content: center;
     }
     .description-text{
         line-height: 1.25;
