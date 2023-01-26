@@ -84,13 +84,55 @@
     </header>
     <!-- Main Body Starts Here-->
     <main>
-     <section class="container what-is-nosk">
-      <h2 class="sub-header">What is NOSK?</h3>
+      <!-- welcome carousel with main events images -->
+      <div class="container-lg my-5">
+        <div id="mainEventCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel indicators -->
+            <ol class="carousel-indicators">
+                <li data-bs-target="#mainEventCarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#mainEventCarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#mainEventCarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#mainEventCarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#mainEventCarousel" data-bs-slide-to="4"></li>
+            </ol>
+            
+            <!-- Wrapper for carousel items -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="site/images/events/nosk_sfd_2019.jpg" class="d-block w-100 img-responsive" alt="nosk sfd 2019">
+                </div>
+                <div class="carousel-item">
+                    <img src="site/images/events/sfd_nosk_2.jpg" class="d-block w-100 img-responsive" alt="sfd nosk 2019 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="site/images/events/linux_0_2_hero.jpg" class="d-block w-100 img-responsive" alt="linux zero to hero nosk">
+                </div>
+                <div class="carousel-item">
+                  <img src="site/images/events/christian_hujer_with_nosk_nepal.jpg" class="d-block w-100 img-responsive" alt="christian hujer at nosk">
+              </div>
+              <div class="carousel-item">
+                <img src="site/images/events/sfd_nosk_2022.jpg" class="d-block w-100 img-responsive" alt="nosk sfd 2022">
+            </div>
+            </div>
+    
+            <!-- Carousel controls -->
+            <a class="carousel-control-prev" href="#mainEventCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#mainEventCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+      <!-- carousel ends here -->
+
+     <section class="container what-is-nosk mt-4">
+      <h2 class="sub-header m-2">What is NOSK?</h3>
       <p class="">
         <b>NOSK - Nepal Open Source Klub</b> is a group of like-minded people who work to raise awareness and adoption of <b>FOSS</b>( Free and Open Source Software) in Nepal. 
         We being at the club aims to educate and train people of different domains of technology  by organizing different events and sessions time and often.
       </p>
      </section>
+
     </main>
     <!-- Main Body Ends Here-->
 </body>
