@@ -55,9 +55,14 @@ img{
     justify-content: center;
 }
 
+/* mobile screen */
 @media (max-width:450px){
     .our-info{
         display: flex;
         flex-direction: column;
+    }
+    .description-text{
+        line-height: 1.25;
+        font-size: 1.25rem;
     }
 }
