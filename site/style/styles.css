@@ -1,0 +1,11 @@
+#nav-list{
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #000000;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+  font-size: 18px;
+}
