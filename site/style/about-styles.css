@@ -20,7 +20,11 @@ body{
 }
 
 .about-section{
-    margin-bottom: 20px;
+    margin-bottom: 60px;
     margin-top: 10px;
     min-height: 100vh;
+}
+
+.about-image{
+    text-align: center;
 }
