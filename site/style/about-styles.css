@@ -1,0 +1,26 @@
+body{
+    background: rgb(227, 242, 255);
+}
+.about-heading{
+    display: inline-block;
+    font-size:xx-large;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    border-bottom: 4px solid blue;
+    text-align: center;
+    color: green;
+}
+
+.about-content{
+    padding-top: 25px;
+    width: 82vw;
+    margin: auto;
+    font-size: large;
+}
+
+.about-section{
+    margin-bottom: 20px;
+    margin-top: 10px;
+    min-height: 100vh;
+}
