@@ -75,7 +75,7 @@
 .about-us{
     padding: 10px;
     font-size: 22px;
-    background-color: blueviolet;
+    background-color: rgb(15, 47, 84);
     color: white;
     border-radius: 5px;
 }
@@ -85,7 +85,7 @@
     text-align: center;
 }
 .about-us:hover{
-   background-color: #000000;
+   background-color: #25a0c6;
    cursor: pointer;
    border: 1 px solid white;
 }
