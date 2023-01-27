@@ -1,67 +1,102 @@
-body{
+body {
     background: url(https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
 }
-img{
+
+body::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0%;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -99;
+}
+
+.logo {
+    filter: drop-shadow(4px 4px 8px #ffffff);
+}
+
+img {
     float: left !important;
 }
-#nav-list{
-  margin-top: 10px;
 
+.active {
+    color: rgb(255, 255, 255) !important;
 }
+
+#nav-list {
+    height: 5rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+    margin-right: -5rem;
+}
+
 #nav-list a {
-  color: #000000;
-  text-align: center;
-  font-size: 20px;
+    overflow: hidden;
+    width: 5.7rem;
+    padding: 0 .5rem 0 .5rem;
+    color: #000000;
+    text-align: center;
+    font-size: 1.4rem;
 }
+
 #nav-list a:hover {
-  font-size: 18px;
-  border-bottom: 3px solid rgb(53, 56, 52);
+    font-size: 18px;
+    border-bottom: 3px solid rgb(53, 56, 52);
 }
-.brand-name{
-    font-family: "Alfa Slab One", 'serif' ;
+
+.brand-name {
+    font-family: "Alfa Slab One", 'serif';
     font-size: 4rem;
-    text-align:right;
+    text-align: right;
     line-height: 0.5;
     font-weight: 300;
     letter-spacing: 1px;
     position: relative;
-    color: green;
-    z-index: 99999999;
+    color: rgb(0, 255, 0);
 }
-.description-text{
-    font-family:  'Unbounded',  cursive;
-    font-weight:250;
+
+.description-text {
+    font-family: 'Unbounded', cursive;
+    font-weight: 250;
     line-height: 3;
     font-size: 1.8rem;
-    margin-bottom:10;
+    margin-bottom: 10;
     text-align: center;
 }
 
-.jumbotron a{
+.jumbotron a {
     text-decoration: none;
     word-break: keep-all;
 }
-.what-we-do{
+
+.what-we-do {
     font-family: "Blippo";
-    color: black; 
-    font-size:15px;
+    color: black;
+    font-size: 15px;
     text-align: center;
-    
-}
-.what-we-do:hover{
-    font-size:26px
+
 }
 
-.social-media{
+.what-we-do:hover {
+    font-size: 26px
+}
+
+.social-media {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.what-is-nosk{
-    
+
+.what-is-nosk {
     color: black;
 }
-.sub-header{
+
+.sub-header {
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -71,22 +106,37 @@ img{
     font-weight: 850;
     border-bottom: 6px solid #ffffff;
 }
-.fullform{
+
+.fullform {
     position: relative;
     margin-top: -30px;
     font-size: 12px;
+    font-weight: 700;
 }
-/* mobile screen */
-@media (max-width:450px){
 
-    .our-info{
+/* mobile screen */
+@media (max-width:450px) {
+    #nav-list {
+        height: 35vh;
+        margin: 0%;
+        width: 100%;
+    }
+
+    .brand-name {
+        padding-bottom: .4rem;
+        margin-top: .5rem;
+    }
+
+    .our-info {
         display: flex;
         flex-direction: column;
     }
-    .social-media{
+
+    .social-media {
         justify-content: center;
     }
-    .description-text{
+
+    .description-text {
         line-height: 1.25;
         font-size: 1.25rem;
     }
