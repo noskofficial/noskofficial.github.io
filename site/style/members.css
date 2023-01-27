@@ -1,0 +1,37 @@
+.title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: rgb(19, 143, 0);
+    transform: translateX(-50%);
+}
+.memb{
+    text-align: center;
+    font-weight: bold;
+    color: rgb(19, 143, 0);
+}
+.memb-img{
+    height: 200px;
+    width: 200px;
+    align-items: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.memb-links{
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;   
+}
