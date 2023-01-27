@@ -1,8 +1,12 @@
+body{
+    background: url(https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
+}
 img{
     float: left !important;
 }
 #nav-list{
   margin-top: 10px;
+
 }
 #nav-list a {
   color: #000000;
@@ -10,27 +14,27 @@ img{
   font-size: 20px;
 }
 #nav-list a:hover {
-  background: #E7E7E7;
   font-size: 18px;
-  border-bottom: 5px solid purple;
+  border-bottom: 3px solid rgb(53, 56, 52);
 }
 .brand-name{
-    font-family: "Alfa Slab One", serif;
-    font-size: 6rem;
-    margin-bottom: 2px;
-    margin-top: 0;
-    line-height: 1.2;
+    font-family: "Alfa Slab One", 'serif' ;
+    font-size: 4rem;
+    text-align:right;
+    line-height: 0.5;
     font-weight: 300;
     letter-spacing: 1px;
     position: relative;
+    color: green;
     z-index: 99999999;
 }
 .description-text{
-    font-weight: 300;
-    line-height: 1.25;
-    font-size: 2rem;
-    margin-top:3rem;
-    margin-bottom:0;
+    font-family:  'Unbounded',  cursive;
+    font-weight:250;
+    line-height: 3;
+    font-size: 1.8rem;
+    margin-bottom:10;
+    text-align: center;
 }
 
 .jumbotron a{
@@ -38,13 +42,11 @@ img{
     word-break: keep-all;
 }
 .what-we-do{
-    padding: 15px;
-    background-color:#fcd11e;
-    color: black;
-    border:none;
-    outline: none;
-    font-size:25px;
+    font-family: "Blippo";
+    color: black; 
+    font-size:15px;
     text-align: center;
+    
 }
 .what-we-do:hover{
     font-size:26px
@@ -56,22 +58,27 @@ img{
     align-items: center;
 }
 .what-is-nosk{
-    background-color: #2e2459;
-    color: #ffffff;
+    
+    color: black;
 }
 .sub-header{
     display: inline-block;
     margin: 0;
     padding: 0;
     letter-spacing: 1px;
-    font-size: 1.75rem;
+    font-size: 2rem;
     line-height: 1.25;
-    font-weight: 800;
-    border-bottom: 5px solid #ffffff;
+    font-weight: 850;
+    border-bottom: 6px solid #ffffff;
 }
-
+.fullform{
+    position: relative;
+    margin-top: -30px;
+    font-size: 12px;
+}
 /* mobile screen */
 @media (max-width:450px){
+
     .our-info{
         display: flex;
         flex-direction: column;
