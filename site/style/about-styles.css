@@ -28,3 +28,30 @@ body{
 .about-image{
     text-align: center;
 }
+
+.photo-of-nosk,.open-source{
+    height: 350px;
+}
+.photo-of-sfd, .photo-of-event{
+    height: 200px;
+}
+
+@media (max-width:575px){
+    .photo-of-sfd, .photo-of-event{
+        height: 150px;
+    }
+}
+
+/* mobile screen */
+@media (max-width:450px){
+    .photo-of-nosk{
+        height: 150px;
+    }
+    .photo-of-sfd, .photo-of-event{
+        height: 100px;
+    }
+    .open-source{
+        height: 200px;
+    }
+}
+
