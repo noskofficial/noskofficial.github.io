@@ -1,6 +1,3 @@
-body{
-    background: rgb(227, 242, 255);
-}
 .about-heading{
     display: inline-block;
     font-size:xx-large;
@@ -35,6 +32,37 @@ body{
 .photo-of-sfd, .photo-of-event{
     height: 200px;
 }
+.main-about{
+    border: 1px solid pink;
+    color: #ffffff;
+}
+.nosk-section, .open-section, .promotion-section{
+    padding: 35px !important;
+}
+.nosk-section{
+    background-color: #2e2459;
+}
+.open-section{
+    background-color: #0b7261;
+}
+.promotion-section{
+    background-color: #a72145;
+}
+.br-purple{
+    border-bottom: 5px solid #2e2459;
+}
+.br-red{
+    border-bottom: 5px solid #a72145;
+}
+.sub-topic{
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+    font-size: 2.75rem;
+    line-height: 1.25;
+    font-weight: 800;
+    display: inline-block !important;
+}
 
 @media (max-width:575px){
     .photo-of-sfd, .photo-of-event{
@@ -44,6 +72,10 @@ body{
 
 /* mobile screen */
 @media (max-width:450px){
+    .about-nosk{
+        display: flex !important;
+        flex-direction: column !important;
+    }
     .photo-of-nosk{
         height: 150px;
     }
