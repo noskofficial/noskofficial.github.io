@@ -70,7 +70,14 @@
 }
 
 #announcement{
-    font-size: 23px;
+    font-size: 25px;
+}
+.event-title{
+    font-size: 30px;
+}
+.event-title:hover{
+    background-color: antiquewhite;
+    font-size: 30px;
 }
 
 .jumbotron{
@@ -128,6 +135,9 @@
   }
 /* mobile screen */
 @media (max-width:450px){
+    .event-title{
+        background-color: antiquewhite;
+    }
     .description-text{
         line-height: 1.25;
         font-size: 1.25rem;
