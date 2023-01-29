@@ -69,6 +69,10 @@
     margin: 10px;
 }
 
+#announcement{
+    font-size: 23px;
+}
+
 .jumbotron{
     display: flex;
     flex-direction: column;
