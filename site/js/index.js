@@ -1,5 +1,6 @@
 
 let announcement = document.getElementById('announcement')
+announcement.innerHTML = "Registration now open for"
 
 /* Read a event.json file*/
 fetch('events.json')
@@ -9,7 +10,7 @@ fetch('events.json')
     if(elt.Status === "Registration Open"){
         const title = document.createElement('a');
         title.href = elt.URL;
-        title.innerText = elt.Title;
+        title.innerText = " " +  elt.Title;
         title.classList.add('event-title')
         announcement.appendChild(title)
     }
