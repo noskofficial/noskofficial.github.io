@@ -1,43 +1,11 @@
-.about-heading{
-    display: inline-block;
-    font-size:xx-large;
-    margin: 0;
-    padding: 0;
-    font-weight: 900;
-    border-bottom: 4px solid blue;
-    text-align: center;
-    color: green;
-}
-
 .about-content{
     padding-top: 25px;
-    width: 82vw;
-    margin: auto;
-    font-size: large;
 }
 
-.about-section{
-    margin-bottom: 20px;
-    margin-top: 10px;
-    min-height: 100vh;
-}
-
-.about-image{
-    text-align: center;
-}
-
-.photo-of-nosk,.open-source{
-    height: 350px;
-}
-.photo-of-sfd, .photo-of-event{
-    height: 200px;
-}
-.main-about{
-    border: 1px solid pink;
-    color: #ffffff;
-}
 .nosk-section, .open-section, .promotion-section{
-    padding: 35px !important;
+    padding: 15px !important;
+    color: white;
+    font-size: 25px;
 }
 .nosk-section{
     background-color: #2e2459;
@@ -61,13 +29,12 @@
     font-size: 2.75rem;
     line-height: 1.25;
     font-weight: 800;
-    display: inline-block !important;
+    display: inline-flex !important;
 }
 
-@media (max-width:575px){
-    .photo-of-sfd, .photo-of-event{
-        height: 150px;
-    }
+.responsive-image{
+    max-width: 100%;
+    height: auto;
 }
 
 /* mobile screen */
@@ -76,14 +43,11 @@
         display: flex !important;
         flex-direction: column !important;
     }
-    .photo-of-nosk{
-        height: 150px;
-    }
-    .photo-of-sfd, .photo-of-event{
-        height: 100px;
-    }
-    .open-source{
-        height: 200px;
-    }
 }
 
+@media (max-width:460px){
+    .nosk-image, .open-image{
+        height: 260px;
+        width: 380px;
+    }
+}
