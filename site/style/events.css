@@ -1,0 +1,14 @@
+.event-title{
+    font-size: 25px !important;
+    display: inline-block;
+}
+.event-title:hover{
+    background-color: antiquewhite;
+}
+.event-status{
+    font-size: 19px;
+    color:blue;
+}
+.event-guest{
+    font-style: italic;
+}
