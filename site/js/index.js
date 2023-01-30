@@ -1,6 +1,5 @@
 
 let announcement = document.getElementById('announcement')
-announcement.innerHTML = "Registration now open for"
 
 /* Read a event.json file*/
 fetch('events.json')
@@ -8,6 +7,7 @@ fetch('events.json')
 .then((data)=>{
    data.forEach(elt => {
     if(elt.Status === "Registration Open"){
+        announcement.innerHTML = "Registration now open for"
         const title = document.createElement('a');
         title.href = elt.URL;
         title.innerText = " " +  elt.Title;
