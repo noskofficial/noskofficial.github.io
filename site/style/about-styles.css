@@ -4,10 +4,12 @@
 
 .nosk-section, .open-section, .promotion-section{
     padding: 15px !important;
-    color: white;
+    color: rgb(43, 40, 40);
     font-size: 25px;
+    min-height: 100vh;
+    background-color: rgb(240, 240, 245);
 }
-.nosk-section{
+/* .nosk-section{
     background-color: #2e2459;
 }
 .open-section{
@@ -15,7 +17,7 @@
 }
 .promotion-section{
     background-color: #a72145;
-}
+} */
 .br-purple{
     border-bottom: 5px solid #2e2459;
 }
@@ -35,7 +37,7 @@
 .responsive-image{
     max-width: 100%;
     height: auto;
-    padding: 20px;
+    padding: 25px;
 }
 
 /* mobile screen */
