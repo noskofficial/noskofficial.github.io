@@ -1,0 +1,51 @@
+.my-header{
+    
+    display:flex;
+    flex-direction: column;
+    padding: 5px;
+ }
+ .navbar{
+     margin: 15px;
+ }
+ .navbar-brand img{
+     float: left !important;
+ }
+ #nav-list{
+   margin-top: 10px;
+ }
+ 
+ #nav-list a {
+   color: #000000;
+   text-align: center;
+   font-size: 24px;
+ }
+ #nav-list .active{
+     background-color: rgb(75, 168, 88);
+ }
+ #nav-list a:hover {
+   border-bottom: 3px solid rgb(53, 56, 52);
+   
+ }
+ .nav-link{
+     font-size: 22px;
+ }
+ 
+.gallery h1{
+font-size: 30px;
+color: rgb(115, 250, 115);
+font-weight: bolder;
+text-align: center;
+text-transform: uppercase;
+margin: 10px;
+
+}
+ 
+
+img{
+  max-width: 100%;
+
+}
+.galleryitems{
+  margin: 20px;
+   
+}
