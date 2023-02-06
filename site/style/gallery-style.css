@@ -49,3 +49,8 @@ img{
   margin: 20px;
    
 }
+.cardimage{
+  width:20rem;
+  height:275px;
+  max-width: 100%;
+}
