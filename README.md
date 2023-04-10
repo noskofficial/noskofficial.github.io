@@ -22,3 +22,5 @@ events and sessions time and often.
 <a href="https://github.com/noskofficial/noskofficial.github.io/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=noskofficial/noskofficial.github.io" />
 </a>
+
+#just
