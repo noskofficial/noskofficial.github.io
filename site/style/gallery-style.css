@@ -46,6 +46,6 @@ img{
 
 }
 .galleryitems{
-  margin: 20px;
-   
+  margin: auto;
+  width: auto;
 }
