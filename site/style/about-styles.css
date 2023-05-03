@@ -25,19 +25,34 @@
     border-bottom: 5px solid #a72145;
 }
 .sub-topic{
-    margin: 0;
+    margin: 0 auto 0 auto;
     padding: 0;
     letter-spacing: 1px;
     font-size: 2.75rem;
     line-height: 1.25;
     font-weight: 800;
     display: inline-flex !important;
+    margin-bottom: 20px;
 }
 
 .responsive-image{
     max-width: 100%;
     height: auto;
     padding: 25px;
+}
+
+.objectives{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.objectives:hover{
+    color: cadetblue;
+    transition: all 1s cubic-bezier(0.79, 0.33, 0.14, 0.53);
+}
+
+.nosc-img{
+    margin-right: 90px;
 }
 
 /* mobile screen */
