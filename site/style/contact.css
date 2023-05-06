@@ -1,0 +1,13 @@
+/* Custom CSS for contact Us form */
+label{
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-size: 16pt;
+}
+input[type="text"], textarea[type="text"] {
+    background-color: rgba(255, 248, 220, 0.235);
+    border: rgb(46, 85, 7) solid 2px;
+    font-size: 15pt;
+    color: rgb(46, 85, 7);
+    font-style: bold;
+}
