@@ -23,8 +23,8 @@ fetch('/events.json')
     var event_status = "Completed"
 
     if (today_date <= start_detail[0]){
-      if (today_date <= start_detail[1] + 1){
-         if (today_date <= start_detail[2]){
+      if (today_month <= start_detail[1] + 1){
+         if (today_year <= start_detail[2]){
             if (curr_hour < start_time[0] && (curr_hour - start_time[0]) <= 1 ) { // not considering minutes
                  event_status = "Registration Open"
             }
