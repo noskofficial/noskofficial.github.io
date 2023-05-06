@@ -9,15 +9,7 @@
     min-height: 100vh;
     background-color: rgb(240, 240, 245);
 }
-/* .nosk-section{
-    background-color: #2e2459;
-}
-.open-section{
-    background-color: #0b7261;
-}
-.promotion-section{
-    background-color: #a72145;
-} */
+
 .br-purple{
     border-bottom: 5px solid #2e2459;
 }
