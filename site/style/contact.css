@@ -8,6 +8,6 @@ input[type="text"], textarea[type="text"] {
     background-color: rgba(255, 248, 220, 0.235);
     border: rgb(46, 85, 7) solid 2px;
     font-size: 15pt;
-    color: rgb(46, 85, 7);
+    color: rgb(224, 225, 224);
     font-style: bold;
 }
