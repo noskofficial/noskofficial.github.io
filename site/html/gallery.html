@@ -24,14 +24,16 @@
   <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
 
   <!--Js Requirements for Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
+
+    <script src="/site/js/gallery.js" defer></script>
   <title>NOSK - Nepal Open Source Klub</title>
 </head>
 
 <body>
-    <header class="">
+    <header>
       <!-- Navbar Starts Here-->
       <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
@@ -85,6 +87,16 @@
       <i class="fa fa-arrow-up"></i>
     </button>
 
+    <!-- Full screen modal -->
+   <div id = "myModal" >
+      <button type="button" id = "close-btn" aria-label="Close">X</button>
+      <div class="img-container">
+        <img class="modal-content" id="modal-img">
+      </div>
+   </div>
+
+
+   <div id="gallery">
     <section class="sec-container" id="BRG_linux">
       <div class="heading">
         <h1>Images from Open Source and Linux</h1>
@@ -92,24 +104,24 @@
 
       <div class="box">
         <div class="img-col">
-          <img src="/site/images/gallery/BRG_linux/photo1675142199.jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675509551 (1).jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675567713.jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675509551.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675142199.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567713.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551.jpeg" alt="">
         </div>
 
         <div class="img-col">
-          <img src="/site/images/gallery/BRG_linux/photo1675509600.jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675526474.jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675567714 (1).jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675509551 (2).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509600.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675526474.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567714 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551 (2).jpeg" alt="">
         </div>
 
         <div class="img-col">
-          <img src="/site/images/gallery/BRG_linux/photo1675567715.jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675567714.jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675509600 (2).jpeg" alt="">
-          <img src="/site/images/gallery/BRG_linux/photo1675567713 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567715.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567714.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509600 (2).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567713 (1).jpeg" alt="">
         </div>
       </div>
     </section>
@@ -121,25 +133,25 @@
 
         <div class="box">
           <div class="img-col">
-            <img src="/site/images/gallery/CH_programming/photo1668491797.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668600527 (1).jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668600527.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668600553.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668491797.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600527 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600527.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600553.jpeg" alt="">
           </div>
 
           <div class="img-col">
-            <img src="/site/images/gallery/CH_programming/photo1668600581.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668600868.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668600869.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668601312.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600581.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600868.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600869.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601312.jpeg" alt="">
           </div>
 
           <div class="img-col">
-            <img src="/site/images/gallery/CH_programming/photo1668601315.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668601317.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668601372 (1).jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668601372.jpeg" alt="">
-            <img src="/site/images/gallery/CH_programming/photo1668600581 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601315.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601317.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601372 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601372.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600581 (1).jpeg" alt="">
           </div>
         </div>
       </section>
@@ -151,18 +163,18 @@
 
         <div class="box">
           <div class="img-col">
-            <img src="/site/images/gallery/SP_linkedlist/photo1672051366.jpeg" alt="">
-            <img src="/site/images/gallery/SP_linkedlist/photo1672051366 (2).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (2).jpeg" alt="">
           </div>
 
           <div class="img-col">
-            <img src="/site/images/gallery/SP_linkedlist/photo1671809486.jpeg" alt="">
-            <img src="/site/images/gallery/SP_linkedlist/photo1672051365.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1671809486.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051365.jpeg" alt="">
           </div>
 
           <div class="img-col">
-            <img src="/site/images/gallery/SP_linkedlist/photo1672051366 (3).jpeg" alt="">
-            <img src="/site/images/gallery/SP_linkedlist/photo1672051366 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (3).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (1).jpeg" alt="">
           </div>
         </div>
       </section>
@@ -174,29 +186,30 @@
 
         <div class="box">
           <div class="img-col">
-            <img src="/site/images/gallery/BP_linux/photo1672500360.jpeg" alt="">
-            <img src="/site/images/gallery/BP_linux/photo1672568451 (1).jpeg" alt="">
-            <img src="/site/images/gallery/BP_linux/photo1672568451 (4).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672500360.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (4).jpeg" alt="">
           </div>
 
           <div class="img-col">
-            <img src="/site/images/gallery/BP_linux/photo1672568451 (3).jpeg" alt="">
-            <img src="/site/images/gallery/BP_linux/photo1672568451 (2).jpeg" alt="">
-            <img src="/site/images/gallery/BP_linux/photo1672571807.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (3).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (2).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672571807.jpeg" alt="">
           </div>
 
           <div class="img-col">
-            <img src="/site/images/gallery/BP_linux/photo1672568451 (6).jpeg" alt="">
-            <img src="/site/images/gallery/BP_linux/photo1672568451.jpeg" alt="">
-            <img src="/site/images/gallery/BP_linux/photo1672568451 (5).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (6).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (5).jpeg" alt="">
           </div>
         </div>
       </section>
+   </div>
 
     </main>
 
     <!-- including script.js for back to top button -->
-    <script src="/site/js/script.js"></script>
+    <script class = "view-image"src="/site/js/script.js"></script>
   
 </body>
 
