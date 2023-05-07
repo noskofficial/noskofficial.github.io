@@ -21,9 +21,12 @@ main{
 }
 
 /* mobile screen */
-@media (max-width:992px){
+@media (max-width:771px){
     .intro-nosk{
         display: flex !important;
         flex-direction: column !important;
+    }
+    .responsive-image{
+        width: 100px;
     }
 }
