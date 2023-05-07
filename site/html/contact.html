@@ -99,7 +99,14 @@
 
         <!--Grid column-->
         <div class="col-md-8 mb-md-0 mb-6" style="margin:auto;">
-            <form class="m-3" id="contact-form" name="contact-form" action="https://formsubmit.co/5baea5a0a531110b41a0fe359b8ac1e1" method="POST">
+            <form class="m-3" id="contact-form" name="contact-form" action="https://formsubmit.co/5baea5a0a531110b41a0fe359b8ac1e1  " method="POST">
+              
+              <!-- Honeypot to work against spams -->
+              <input type="text" name="_honey" style="display: none;">
+              <!-- Disable Captcha -->
+              <input type="hidden" name="_captcha" value="false">   
+              <!-- Custom Form submission success URL  -->
+              <input type="hidden" name="_next" value="contact-success.html">
 
                 <!--Grid row-->
                 <div class="row">
