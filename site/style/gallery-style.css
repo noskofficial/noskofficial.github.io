@@ -1,51 +1,127 @@
-.my-header{
-    
-    display:flex;
-    flex-direction: column;
-    padding: 5px;
- }
- .navbar{
-     margin: 15px;
- }
- .navbar-brand img{
-     float: left !important;
- }
- #nav-list{
-   margin-top: 10px;
- }
- 
- #nav-list a {
-   color: #000000;
-   text-align: center;
-   font-size: 24px;
- }
- #nav-list .active{
-     background-color: rgb(75, 168, 88);
- }
- #nav-list a:hover {
-   border-bottom: 3px solid rgb(53, 56, 52);
-   
- }
- .nav-link{
-     font-size: 22px;
- }
- 
-.gallery h1{
-font-size: 30px;
-color: rgb(115, 250, 115);
-font-weight: bolder;
-text-align: center;
-text-transform: uppercase;
-margin: 10px;
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
- 
 
-img{
+.sec-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 40px 20px 0 20px;
+}
+
+.sec-container .heading{
+  width: 50%;
+  padding-bottom: 50px;
+}
+.sec-container .heading h1{
+  font-size: 1.5em;
+  font-weight: 100%;
+  padding-bottom: 5px;
+  /* border-bottom: 0.5px solid black; */
+}
+
+.sec-container .box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+ }
+ 
+ .sec-container .box .img-col{
+   display: flex;
+   flex-direction: column;
+   width: 32.5%;
+ }
+ 
+ .sec-container .box .img-col img{
+   width: 100%;
+   padding-bottom: 15px;
+   border-radius: 5px;
+ }
+
+ #myModal {
+  box-sizing: border-box;
+  display: none; 
+  position: fixed;
+  z-index: 999; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
   max-width: 100%;
-
+  max-height: 100%;
 }
-.galleryitems{
+
+.modal-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+#close-btn {
+  font: 2em sans-serif;
+  color: black;
+  background-color: #fff;
+  outline: none;
+  border: none;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+
+
+/* Make the image responsive */
+.img-container img {
+  image-orientation: from-image;
+  text-align: center;
+  position: absolute;
   margin: auto;
-  width: auto;
+  display: block;
+  max-width: 100%;
+}
+
+ /* BACK to top button  */
+#btn-back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+@media (max-width: 768px){
+  .img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+}
+
+ @media only screen and (max-width: 769px){
+  .sec-container .box{
+    flex-direction: column;
+  }
+
+  .sec-container .box .img-col{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 643px){
+  .sec-container .heading{
+    width: 100%;
+  }
+  .sec-container .heading h1{
+    font-size: 1em;
+  
+  }
 }

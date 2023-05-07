@@ -12,195 +12,205 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <!--Add custom style sheets below this comment-->
+  <link href="/site/style/styles.css" rel="stylesheet">
   <link href="/site/style/gallery-style.css" rel="stylesheet">
 
   <!-- favicon -->
   <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
 
   <!--Js Requirements for Bootstrap-->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
-  <script src="/site/js/index.js" defer></script>
+
+    <script src="/site/js/gallery.js" defer></script>
   <title>NOSK - Nepal Open Source Klub</title>
 </head>
 
-<div class="container">
-  <header class="my-header">
-    <!-- Navbar Starts Here-->
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        
-          <!-- Load NOSK Logo-->
-          <div class="d-flex flex-column align-items-center">
-            <a class="navbar-brand" href="/">
-              <img src="/site/images/nosk-logo.png" alt="Logo of Nepal Open Source Klub" width="120" height="120">
-            </a>
-            <p class="fullform">Nepal Open Source Klub</p>
-          </div>
+<body>
+    <header>
+      <!-- Navbar Starts Here-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
           
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" tabindex="-1" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbar"></span>
-        </button>
-        <!--Navbar Item Starts here-->
-        <div class="offcanvas-lg offcanvas-end" id="offcanvasNavbar">
-          <div class="offcanvas-header">
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+            <!-- Load NOSK Logo-->
+            <div class="d-flex flex-column align-items-center">
+              <a class="navbar-brand" href="/">
+                <img src="/site/images/nosk-logo.png" alt="Logo of Nepal Open Source Klub" width="120" height="120">
+              </a>
+              <p class="fullform">Nepal Open Source Klub</p>
+            </div>
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" tabindex="-1" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbar"></span>
+          </button>
+          <!--Navbar Item Starts here-->
+          <div class="offcanvas-lg offcanvas-end" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul id = "nav-list" class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/site/html/about.html">About</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/site/html/gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/site/html/events.html">Events</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/site/html/contact.html">Contact</a>
+              </li>
+              </ul>
+            </div>
           </div>
-          <div class="offcanvas-body">
-            <ul id = "nav-list" class="navbar-nav">
-             <li class="nav-item">
-               <a class="nav-link" href="/">Home</a>
-             </li>
-             <li class="nav-item">
-              <a class="nav-link" href="/site/html/about.html">About</a>
-             </li>
-             <li class="nav-item active">
-              <a class="nav-link" href="/site/html/gallery.html">Gallery</a>
-             </li>
-             <li class="nav-item">
-              <a class="nav-link" href="/site/html/events.html">Events</a>
-             </li>
-             <li class="nav-item">
-              <a class="nav-link" href="/site/html/contact.html">Contact</a>
-             </li>
-            </ul>
+          <!--Navbar Item Ends here-->
+        </div>
+      </nav>
+      <!-- Navbar Ends Here-->
+    </header>
+
+    <main>
+
+       <!-- Back to top button -->
+    <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </button>
+
+    <!-- Full screen modal -->
+   <div id = "myModal" >
+      <button type="button" id = "close-btn" aria-label="Close">X</button>
+      <div class="img-container">
+        <img class="modal-content" id="modal-img">
+      </div>
+   </div>
+
+
+   <div id="gallery">
+    <section class="sec-container" id="BRG_linux">
+      <div class="heading">
+        <h1>Images from Open Source and Linux</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675142199.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567713.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551.jpeg" alt="">
+        </div>
+
+        <div class="img-col">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509600.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675526474.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567714 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551 (2).jpeg" alt="">
+        </div>
+
+        <div class="img-col">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567715.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567714.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509600 (2).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567713 (1).jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+      <section class="sec-container" id="CH_programming">
+        <div class="heading">
+          <h1>Programming Journey with Open Source and Future of Programming Language</h1>
+        </div>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668491797.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600527 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600527.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600553.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600581.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600868.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600869.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601312.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601315.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601317.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601372 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601372.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600581 (1).jpeg" alt="">
           </div>
         </div>
-        <!--Navbar Item Ends here-->
-      </div>
-    </nav>
-    <!-- Navbar Ends Here-->
-  </header>
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/site/images/slide1.jpg" class="d-block w-100" alt="NOSK Event - Talk by Christian Hujer">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Event by Christian Hujer  </h5>
-          <p> How to make carrier in tech?</p>
+      </section>
+
+      <section class="sec-container" id="SP_linkedlist">
+        <div class="heading">
+          <h1>Photos from Linked List Implementation in Java</h1>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/site/images/slide2.jpg" class="d-block w-100" alt="NOSK Event - Talk by Royan on Game Development">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Event by Royan Dugu</h5>
-          <p>Game Development</p>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (2).jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1671809486.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051365.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (3).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (1).jpeg" alt="">
+          </div>
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="/site/images/slide3.jpg" class="d-block w-100" alt="NOSK Event - Talk by Budh Ram Gurung on Open Source and Linux">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Event by Budh Ram Gurung</h5>
-          <p>Open source and Linux</p>
+      </section>
+
+      <section class="sec-container" id="BP_linux">
+        <div class="heading">
+          <h1>Photos from Linux - The Revolution</h1>
         </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-  </div>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672500360.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (4).jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (3).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (2).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672571807.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (6).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (5).jpeg" alt="">
+          </div>
+        </div>
+      </section>
+   </div>
+
+    </main>
+
+    <!-- including script.js for back to top button -->
+    <script class = "view-image"src="/site/js/script.js"></script>
   
-
-  <section class="gallery min-vh-100">
-    <h1>some glimpses of the events</h1>
-    <div class="container-lg">
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-        <div class="col">
-          <img src="/site/images/slide1.jpg" alt="" class="galleryitems mb-4">
-        </div>
-
-        <div class="col">
-          <img src="/site/images/slide2.jpg" alt="" class="galleryitems mb-4">
-        </div>
-
-        <div class="col">
-          <img src="/site/images/slide3.jpg" alt="" class="galleryitems mb-4">
-        </div>
-
-        <div class="col">
-          <img src="/site/images/slide5.jpg" alt="" class="galleryitems mb-4">
-        </div>
-
-        <div class="col">
-          <img src="/site/images/slide5.jpg" alt="" class="galleryitems mb-4">
-        </div>
-        <div class="col">
-          <img src="/site/images/slide5.jpg" alt="" class="galleryitems mb-4">
-        </div>
-        <div class="col">
-          <img src="/site/images/slide5.jpg" alt="" class="galleryitems mb-4">
-        </div>
-
-      </div>
-    </div>
-  </section>
-<!--
-  <div class="container-lg">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2">
-
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="/site/images/organize-event.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text"> Event by Christian Hujer : How to make carrier in tech?
-
-            </p>
-          </div>
-          <a href="#" class="btn btn-primary">More Photos</a>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="/site/images/bimalraj.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text"> Event by Bimal Raj Gyawali : API development with Java and Spring Boot.
-            </p>
-          </div>
-          <a href="#" class="btn btn-primary">More Photos</a>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="/site/images/dhanu.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text"> Event by Budh Ram Gurung : Open source and linux
-
-            </p>
-          </div>
-          <a href="#" class="btn btn-primary">More Photos</a>
-        </div>
-      </div>
-
-      <div class="col-3">
-        <div class="card" style="width: 18rem;">
-          <img src="/site/images/sarthakpaneru.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text"> Event by Sarthak Paneru :Linked List Implementation and Testing in Java
-
-            </p>
-          </div>
-          <a href="#" class="btn btn-primary">More Photos</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-  !-->
 </body>
 
 </html>
