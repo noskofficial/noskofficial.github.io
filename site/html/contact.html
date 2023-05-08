@@ -99,7 +99,7 @@
 
         <!--Grid column-->
         <div class="col-md-8 mb-md-0 mb-6" style="margin:auto;">
-            <form class="m-3" id="contact-form" name="contact-form" action="https://formsubmit.co/5baea5a0a531110b41a0fe359b8ac1e1  " method="POST">
+            <form class="m-3" id="contact-form" name="contactForm" action="https://formsubmit.co/5baea5a0a531110b41a0fe359b8ac1e1" onsubmit="return validateForm()" method="POST">
               
               <!-- Honeypot to work against spams -->
               <input type="text" name="_honey" style="display: none;">
@@ -120,7 +120,7 @@
                     </div>
                     <!--Grid column-->
 
-                    <!--Grid column-->https://nosk.org.np/site/html/
+                    <!--Grid column-->
                     <div class="col-md-6">
                         <div class="md-form mb-0">  
                           <label for="email" class="">Your email</label>
@@ -159,7 +159,7 @@
                 <!--Grid row-->
 
             <div class="text-center text-md-left">
-                <a class="btn submit" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <input type="submit" class="btn submit" value="Send"/>
             </div>
             </form>
         </div>

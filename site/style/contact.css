@@ -17,7 +17,7 @@ label{
     font-size: 16pt;
 }
 
-input[type="text"], textarea[type="text"] {
+input[type="text"],input[type="email"], textarea[type="text"] {
     background-color: rgba(255, 248, 220, 0.235);
     border: rgb(46, 85, 7) solid 2px;
     font-size: 15pt;
