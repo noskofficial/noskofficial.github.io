@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans&display=swap" rel="stylesheet">
     <!--Add custom style sheets below this comment-->
     <link href="/site/style/styles.css" rel="stylesheet">
-    <link href="/site/style/about-styles.css" rel="stylesheet">
+    <link href="/site/style/contact.css" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
@@ -99,7 +99,14 @@
 
         <!--Grid column-->
         <div class="col-md-8 mb-md-0 mb-6" style="margin:auto;">
-            <form class="m-3" id="contact-form" name="contact-form" action="mailto:nost@ncit.edu.np" method="POST">
+            <form class="m-3" id="contact-form" name="contact-form" action="https://formsubmit.co/5baea5a0a531110b41a0fe359b8ac1e1  " method="POST">
+              
+              <!-- Honeypot to work against spams -->
+              <input type="text" name="_honey" style="display: none;">
+              <!-- Disable Captcha -->
+              <input type="hidden" name="_captcha" value="false">   
+              <!-- Custom Form submission success URL  -->
+              <input type="hidden" name="_next" value="contact-success.html">
 
                 <!--Grid row-->
                 <div class="row">
@@ -150,12 +157,11 @@
                     </div>
                 </div>
                 <!--Grid row-->
-            </form>
 
             <div class="text-center text-md-left">
-                <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+                <a class="btn submit" onclick="document.getElementById('contact-form').submit();">Send</a>
             </div>
-            <div class="status"></div>
+            </form>
         </div>
         <!--Grid column-->
 
