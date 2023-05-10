@@ -1,4 +1,4 @@
 mediumZoom('.view-image', {
-    margin: 50,
+    margin: 0,
     scrollOffset: 150,
 })
