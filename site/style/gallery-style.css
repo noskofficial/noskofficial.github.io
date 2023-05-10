@@ -1,10 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.sec-container{
+.sec-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,83 +13,138 @@
   margin: 40px 20px 0 20px;
 }
 
-.sec-container .heading{
+.sec-container .heading {
   width: 50%;
   padding-bottom: 50px;
 }
-.sec-container .heading h1{
+
+.sec-container .heading h1 {
   font-size: 1.5em;
   font-weight: 100%;
   padding-bottom: 5px;
   /* border-bottom: 0.5px solid black; */
 }
 
-.sec-container .box{
+.sec-container .box {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
- }
- 
- .sec-container .box .img-col{
-   display: flex;
-   flex-direction: column;
-   width: 32.5%;
- }
- 
- .sec-container .box .img-col img{
-   width: 100%;
-   padding-bottom: 15px;
-   border-radius: 5px;
- }
+}
 
- #myModal {
+.sec-container .box .img-col {
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.sec-container .box .img-col img {
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* ------- ImageBox----- */
+
+
+
+/* ///// */
+#myModal {
   box-sizing: border-box;
-  display: none; 
+  display: none;
   position: fixed;
-  z-index: 999; 
+  z-index: 999;
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: auto;
   background-color: black;
 }
 
-.modal-content {
+.top {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 1.5rem;
+  height: 8vh;
+  align-items: center;
+}
+
+.top .modal-content {
   max-width: 100%;
   max-height: 100%;
 }
 
-.modal-image{
+.modal-image {
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
 }
+
 #close-btn {
-  font: 2em sans-serif;
-  color: black;
-  background-color: #fff;
-  outline: none;
-  border: none;
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: 200ms all;
+}
+
+#close-btn:hover {
+  color: red;
 }
 
 
 
 /* Make the image responsive */
-.img-container img {
-  image-orientation: from-image;
-  text-align: center;
-  position: absolute;
-  margin: auto;
-  display: block;
-  max-width: 100%;
+.img-container {
+  width: 100%;
+  height: 90vh;
+  z-index: 999999;
+  display: flex;
 }
 
- /* BACK to top button  */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container .left {
+  width: 10%;
+  height: 90vh;
+  z-index: 999999;
+}
+
+.img-container .right {
+  width: 10%;
+  height: 90vh;
+  z-index: 999999;
+}
+
+.userInter {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: 200ms all;
+  color: gray;
+}
+
+.userInter:hover {
+  color: white;
+}
+
+.img-container .imageBox {
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img-container .imageBox img {
+  border-radius: .4rem;
+  width: auto;
+  height: 89vh;
+}
+
+/* BACK to top button  */
 #btn-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -97,7 +152,7 @@
   display: none;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .img-container {
     display: flex;
     justify-content: center;
@@ -106,22 +161,37 @@
   }
 }
 
- @media only screen and (max-width: 769px){
-  .sec-container .box{
+@media only screen and (max-width: 1014px) {
+  .img-container .imageBox {
+    width: 90%;
+    overflow: hidden;
+    padding: .4rem;
+  }
+
+  .img-container .imageBox img {
+    height: auto;
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .sec-container .box {
     flex-direction: column;
   }
 
-  .sec-container .box .img-col{
+  .sec-container .box .img-col {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 643px){
-  .sec-container .heading{
+@media only screen and (max-width: 643px) {
+  .sec-container .heading {
     width: 100%;
   }
-  .sec-container .heading h1{
+
+  .sec-container .heading h1 {
     font-size: 1em;
-  
+
   }
+
 }

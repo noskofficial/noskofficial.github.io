@@ -1,141 +1,175 @@
-.my-header{
-   height: 100vh;
-   display:flex;
-   flex-direction: column;
-   background: url(https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
-   padding: 5px;
+.my-header {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url(https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
+    padding: 5px;
 }
-.navbar{
+
+.navbar {
     margin: 15px;
 }
-.navbar-brand img{
+
+.navbar-brand img {
     float: left !important;
 }
-#nav-list{
-  margin-top: 10px;
+
+#nav-list {
+    height: 3rem;
+    margin-top: 10px;
 }
 
 #nav-list a {
-  color: #000000;
-  text-align: center;
-  font-size: 24px;
+    color: #000000;
+    text-align: center;
+    font-size: 24px;
+    /* height: 95%; */
+    margin-left: 1rem;
 }
-#nav-list .active{
+
+#nav-list .active {
     background-color: rgb(130, 173, 136);
 }
+
 #nav-list a:hover {
-  border-bottom: 3px solid rgb(53, 56, 52);
-  
+    border-bottom: 3px solid rgb(53, 56, 52);
 }
-.nav-link{
+
+.nav-link {
     font-size: 22px;
 }
-.brand-name{
-    font-family: "Alfa Slab One", 'serif' ;
+
+.brand-name {
+    font-family: "Alfa Slab One", 'serif';
     font-size: 4.5rem;
-    text-align:right;
+    text-align: right;
     line-height: 0.5;
     font-weight: 300;
     letter-spacing: 1px;
     position: relative;
     color: green;
 }
-.description-text{
-    font-family:  'Unbounded',  cursive;
-    border-right: .15em solid black; /* The cursor */
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    font-weight:250;
+
+.description-text {
+    font-family: 'Unbounded', cursive;
+    border-right: .15em solid black;
+    /* The cursor */
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    font-weight: 250;
     line-height: 2;
     font-size: 2rem;
     text-align: center;
-    white-space: nowrap; /* Keeps the content on a single line */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
     margin: 0 auto;
-    animation: 
-    typing 3.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+    animation:
+        typing 3.5s steps(40, end),
+        blink-caret .75s step-end infinite;
 }
+
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black; }
-  }
-.brand-about{
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: black;
+    }
+}
+
+.brand-about {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:5px;
+    padding: 5px;
     margin: 10px;
 }
 
-#announcement{
+#announcement {
     font-size: 25px;
 }
-.event-title{
+
+.event-title {
     font-size: 30px;
 }
-.event-title:hover{
+
+.event-title:hover {
     background-color: antiquewhite;
     font-size: 30px;
 }
 
-.jumbotron{
+.jumbotron {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding:5px;
+    padding: 5px;
     margin: 30px;
 }
 
-.jumbotron a{
+.jumbotron a {
     text-decoration: none;
 }
 
 /* Text beneath club logo*/
-.fullform{
+.fullform {
     position: relative;
     margin-top: -30px;
     font-size: 12px;
 }
 
-.about-us{
+.about-us {
     padding: 10px;
     font-size: 22px;
     background-color: rgb(15, 47, 84);
     color: white;
     border-radius: 5px;
 }
-.about-us a{
+
+.about-us a {
     text-decoration: none;
     color: white;
     text-align: center;
 }
-.about-us:hover{
-   background-color: #25a0c6;
-   cursor: pointer;
-   border: 1 px solid white;
+
+.about-us:hover {
+    background-color: #25a0c6;
+    cursor: pointer;
+    border: 1 px solid white;
 }
-.our-info{
+
+.our-info {
     padding: 5px;
     margin: 15px;
 }
+
 /* BACK to top button  */
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
-  }
+}
+
 #btn-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     display: none;
-  }
+}
 
 /* @media (min-width: 992px) {
     .offcanvas{
@@ -145,15 +179,17 @@
 
 @media (max-width: 992px) {
     .navbar-collapse {
-      transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
+        transition: visibility .2s ease-in-out, -webkit-transform .2s ease-in-out;
     }
 }
+
 /* mobile screen */
-@media (max-width:450px){
-    .event-title{
+@media (max-width:450px) {
+    .event-title {
         background-color: antiquewhite;
     }
-    .description-text{
+
+    .description-text {
         line-height: 1.25;
         font-size: 1.25rem;
         margin-top: 8px;
