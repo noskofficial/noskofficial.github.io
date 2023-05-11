@@ -19,7 +19,6 @@ fetch('events.json')
     if (today_year <= start_detail[2]){
         if (today_month + 1 <= start_detail[1]){
            if (today_date <= start_detail[0]){
-              if (curr_hour < start_time[0] && (curr_hour - start_time[0]) <= 1 ) { // not considering minutes
                 const event = document.createElement('p');
                 event.innerHTML = "Registration now open for: "
                 const title = document.createElement('a');
@@ -28,7 +27,6 @@ fetch('events.json')
                 title.classList.add('event-title')
                 event.appendChild(title)
                 announcement.appendChild(event)
-              }
            }
         }
       }
