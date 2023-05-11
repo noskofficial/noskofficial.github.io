@@ -12,7 +12,7 @@ const close_modal = () => {
 
 const view_image = (e) => {
     gallery.style.display = "none";
- 
+
     var modalImg = document.getElementById("modal-img");
     modal.style.display = "block";
     modalImg.src = e.target.src;
@@ -25,7 +25,7 @@ const view_image = (e) => {
 }
 
 images.forEach(image => {
-    image.addEventListener("click", view_image);
+    // image.addEventListener("click", view_image);
 });
 
 
