@@ -7,7 +7,8 @@
         "By": "NOSK Contributors",
         "Date": "21-5-2023",
         "Time": "11:00",
-        "URL":"https://bit.ly/experience-sharing-nosk"
+        "URL":"https://bit.ly/experience-sharing-nosk",
+        "IMGURL":"/site/html/gallery.html"
     },
     {
 
@@ -16,7 +17,8 @@
         "By": "NOSK",
         "Date": "14-5-2023",
         "Time": "14:00",
-        "URL":"https://shorturl.at/aBSU8"
+        "URL":"https://shorturl.at/aBSU8",
+        "IMGURL":"/site/html/gallery.html"
     },
     {
         "id":"5",
@@ -24,7 +26,8 @@
         "By": "Budh Ram Gurung",
         "Date": "4-2-2023",
         "Time": "14:00",
-        "URL":"https://www.bit.ly/nosk-talkfoss"
+        "URL":"https://www.bit.ly/nosk-talkfoss",
+        "IMGURL":"/site/html/gallery.html#BRG_linux"
     },
     {
         "id":"4",
@@ -32,7 +35,8 @@
         "By":"Royan Duju",
         "Date":"15-12-2022",
         "Time": "14:00",
-        "URL":""
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#RD_gamedev"
     },
     {
         "id":"3",
@@ -40,7 +44,8 @@
         "By":"Bishal Poudel",
         "Date":"1-1-2023",
         "Time": "14:00",
-        "URL":""
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#BP_linux"
     },
     {
         "id":"2",
@@ -48,7 +53,8 @@
         "By":"Sarthak Paneru",
         "Date":"26-11-2022",
         "Time": "14:00",
-        "URL":""
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#SP_linkedlist"
     },
     {
         "id":"1",
@@ -56,6 +62,7 @@
         "By":"Christian Hujer",
         "Date":"16-11-2022",
         "Time": "14:00",
-        "URL":""
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#CH_programming"
     }
 ]
