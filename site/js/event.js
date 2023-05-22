@@ -30,7 +30,15 @@ fetch('/events.json')
       }
     }
 
-    title.href = elt.URL;
+   //  If event is not complete refer to registration for event 
+   // otherwise refer to gallery section of corresponsing event
+
+   if (event_status != "Completed"){
+      title.href = elt.URL;
+   }else{
+      title.href = elt.IMGURL;
+   }
+    
     title.classList.add('event-title');
     status.classList.add('event-status');
     guest.classList.add('event-guest');
