@@ -2,13 +2,49 @@
 
 [
     {
+        "id":"12",
+        "Title":"Web Development Training - Day 4",
+        "By": "NOSK",
+        "Date": "15-7-2023",
+        "Time": "10:30",
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay4"
+    },
+    {
+        "id":"11",
+        "Title":"Web Development Training - Day 3",
+        "By": "NOSK",
+        "Date": "8-7-2023",
+        "Time": "11:00",
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay3"
+    },
+    {
+        "id":"10",
+        "Title":"QA as a career (WebDevTraining - Day 2)",
+        "By": "Suhent Bikram Ran",
+        "Date": "2-7-2023",
+        "Time": "11:00",
+        "URL":"https://forms.gle/6wTc2qRBgta46h9p9",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay2"
+    },
+    {
+        "id":"9",
+        "Title":"Web Development Training - Day 1",
+        "By": "NOSK",
+        "Date": "25-6-2023",
+        "Time": "10:30",
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay1"
+    },
+    {   
         "id":"8",
-        "Title":"Kickoff Career in IT as a Project Manager; Is it right for Me?",
+        "Title":"Kickoff Career in IT as a Project Manager; Is it right for Me? (WebDevTraining - Day 0)",
         "By": "Yukta Sharma",
         "Date": "18-6-2023",
         "Time": "10:00",
         "URL":"https://bit.ly/nosk-project-management",
-        "IMGURL":"/site/html/gallery.html"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay0"
     },
     {
         "id":"7",
