@@ -2,6 +2,15 @@
 
 [
     {
+        "id":"12",
+        "Title":"Web Development Training - Day 4",
+        "By": "NOSK",
+        "Date": "15-7-2023",
+        "Time": "10:30",
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay4"
+    },
+    {
         "id":"11",
         "Title":"Web Development Training - Day 3",
         "By": "NOSK",
