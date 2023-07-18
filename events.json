@@ -2,6 +2,15 @@
 
 [
     {
+        "id":"11",
+        "Title":"Web Development Training - Day 3",
+        "By": "NOSK",
+        "Date": "8-7-2023",
+        "Time": "11:00",
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay3"
+    },
+    {
         "id":"10",
         "Title":"QA as a career (WebDevTraining - Day 2)",
         "By": "Suhent Bikram Ran",
