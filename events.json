@@ -2,8 +2,17 @@
 
 [
     {
+        "id":"9",
+        "Title":"Web Development Training - Day 1",
+        "By": "NOSK",
+        "Date": "25-6-2023",
+        "Time": "10:30",
+        "URL":"",
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay1"
+    },
+    {   
         "id":"8",
-        "Title":"Kickoff Career in IT as a Project Manager; Is it right for Me?",
+        "Title":"Kickoff Career in IT as a Project Manager; Is it right for Me? (WebDevTraining - Day 0)",
         "By": "Yukta Sharma",
         "Date": "18-6-2023",
         "Time": "10:00",
