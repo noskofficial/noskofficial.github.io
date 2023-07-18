@@ -22,9 +22,9 @@
 #nav-list a {
   color: #000000;
   text-align: center;
-  font-size: 24px;
+  /* font-size: 14px; */
   /* height: 95%; */
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 
 #nav-list .active {
@@ -35,20 +35,17 @@
   box-shadow:  2px 2px 2px #031d44;
 }
 
-/* #nav-list a:hover {
-    border-bottom: 3px solid rgb(53, 56, 52);
-} */
+
 
 /* hover effect on nav link add  */
 
 .nav-link {
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
+  font-weight: 500;
+  font-size: x-large;
   text-decoration: none;
   color: #031d44;
-  padding: 20px 0px;
-  margin: 0px 20px;
+  padding: 10px 0px;
+  margin-left: 1rem;
   display: inline-block;
   position: relative;
   opacity: 0.75;
@@ -60,7 +57,7 @@
 
 .nav-link::before {
   transition: 300ms;
-  height: 5px;
+  height: 3px;
   content: "";
   position: absolute;
   background-color: #031d44;
@@ -76,6 +73,11 @@
 }
 
 /* hover effect on navlink end here   */
+
+.social-media a img:hover{
+    transition: 0.35s;
+    filter: drop-shadow(2px 2px 3px #031d44);  /*on hover social media shadow add*/
+}
 
 .brand-name {
   font-family: "Alfa Slab One", "serif";
