@@ -22,13 +22,12 @@ fetch('/events.json')
 
     var event_status = "Completed"
 
-    if (today_year <= start_detail[2]){
-      if (today_month + 1 <= start_detail[1]){
-         if (today_date <= start_detail[0]){
-                 event_status = "Registration Open"
-         }
-      }
-    }
+    if (today_year < start_detail[2])
+      event_status = "Registration Open";    
+    else if (today_year == start_detail[2] && today_month < start_detail[1])
+      event_status = "Registration Open";
+    else if (today_year == start_detail[2] && today_month == start_detail[1] && today_date <= start_detail[0])
+      event_status = "Registration Open";
 
     title.href = elt.URL;
     title.classList.add('event-title');
