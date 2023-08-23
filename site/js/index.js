@@ -14,7 +14,6 @@ fetch('events.json')
    data.forEach(elt => {
 
     const start_detail = elt.Date.split("-");
-    const start_time = elt.Time.split(":");
 
     if (start_detail[2] >= today_year){
       if ( start_detail[1] > today_month + 1 ){
@@ -41,23 +40,6 @@ fetch('events.json')
        }
       }
     }
-
-    
-
-   //  if (today_year >= start_detail[2]){
-   //      if (today_month + 1 >= start_detail[1]){
-   //         if (today_date <= start_detail[0]){
-   //              const event = document.createElement('p');
-   //              event.innerHTML = "Registration now open for: "
-   //              const title = document.createElement('a');
-   //              title.href = elt.URL;
-   //              title.innerText = " " +  elt.Title;
-   //              title.classList.add('event-title')
-   //              event.appendChild(title)
-   //              announcement.appendChild(event)
-   //         }
-   //      }
-   //    }
    }
   );
 })
