@@ -29,7 +29,15 @@ fetch('/events.json')
     else if (today_year == start_detail[2] && (today_month+1) == start_detail[1] && today_date <= start_detail[0])
       event_status = "Registration Open";
 
-    title.href = elt.URL;
+   //  If event is not complete refer to registration for event 
+   // otherwise refer to gallery section of corresponsing event
+
+   if (event_status != "Completed"){
+      title.href = elt.URL;
+   }else{
+      title.href = elt.IMGURL;
+   }
+    
     title.classList.add('event-title');
     status.classList.add('event-status');
     guest.classList.add('event-guest');
