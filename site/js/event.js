@@ -24,9 +24,9 @@ fetch('/events.json')
 
     if (today_year < start_detail[2])
       event_status = "Registration Open";    
-    else if (today_year == start_detail[2] && today_month < start_detail[1])
+    else if (today_year == start_detail[2] && (today_month+1) < start_detail[1])
       event_status = "Registration Open";
-    else if (today_year == start_detail[2] && today_month == start_detail[1] && today_date <= start_detail[0])
+    else if (today_year == start_detail[2] && (today_month+1) == start_detail[1] && today_date <= start_detail[0])
       event_status = "Registration Open";
 
    //  If event is not complete refer to registration for event 
