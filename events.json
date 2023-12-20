@@ -1,6 +1,37 @@
 
 
-[
+[   {
+      "id":"19",
+      "Title": "HackFest NCIT 2024",
+      "By": "NOSK & NCIT",
+      "Date": "11-01-2024",
+      "Time":"7",
+      "URL": "https://forms.gle/9sy1e3rPq1DemwtK8"
+    },
+    {
+      "id":"18",
+      "Title":"Day 2 Git and Github Workshop",
+      "By": "Abhilekh Gautam and Pratik Devkota",
+      "Date":"16-12-2023",
+      "Time":"11:00",
+      "URL":""
+    },
+    {
+      "id":"17",
+      "Title":"Day 1 Git and Github Workshop",
+      "By": "Satya Raj Awasthi",
+      "Date":"15-12-2023",
+      "Time":"10:40",
+      "URL":""
+    },	
+    {
+      "id":"16",
+      "Title":"Open Source and Tech Career",
+      "By": "Justin W Flory",
+      "Date": "06-12-2023",
+      "Time":"10:30",
+      "URL":""
+    },	
     {
         "id":"15",
         "Title":"SOFTWARE FREEDOM DAY 2023",
