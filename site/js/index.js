@@ -13,7 +13,6 @@ fetch('events.json')
    data.forEach(elt => {
 
     const start_detail = elt.Date.split("-");
-    console.log(start_detail[2]);
     if (start_detail[2] == today_year){
       if ( start_detail[1] > today_month + 1 ){
          if (start_detail[0] <= today_date ){
