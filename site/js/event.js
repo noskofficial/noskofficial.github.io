@@ -11,7 +11,7 @@ fetch('/events.json')
 .then((data)=> data.json())
 .then((data)=>{
    data.forEach(elt => {
-
+    
     const container = document.createElement('div');  
     const title = document.createElement('a');
     const status = document.createElement('p');
@@ -41,16 +41,18 @@ fetch('/events.json')
     title.classList.add('event-title');
     status.classList.add('event-status');
     guest.classList.add('event-guest');
+    container.classList.add('single-event-div')
 
     title.innerText  = elt.Title;
-    status.innerText = "Status:" + event_status;
-    guest.innerText  = "By:" + elt.By;
+    status.innerText = "Status :" + event_status;
+    guest.innerText  = "By : " + elt.By;
 
     container.appendChild(title)
     container.appendChild(status)
     container.appendChild(guest)
 
-    events_div.appendChild(container)
+
+    events_div.append(container)
 
    });
 })

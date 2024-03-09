@@ -7,8 +7,39 @@
 }
 .event-status{
     font-size: 19px;
-    color:blue;
+    color: blue;
 }
 .event-guest{
     font-style: italic;
+}
+
+.single-event-div{
+    border: black 2px solid;
+    padding: 2%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.event-parent-div{
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.single-event-div:hover{
+    background-color: antiquewhite;
+    transform: scale(1.05);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#event-list{
+    display: flex;
+    flex-direction: column;
+}
+
+.event-open{
+    color: lightgreen;
+}
+
+.event_completed{
+    color: blue;
 }
