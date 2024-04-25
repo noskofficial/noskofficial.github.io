@@ -1,6 +1,12 @@
-
-
-[   {
+[    {
+      "id":"20",
+      "Title": "Workshop on Spring Boot and Spring Security",
+      "By": "Sarthak Paneru",
+      "Date": "28-04-2024",
+      "Time":"12:10",
+      "URL": "https://forms.gle/to56o58T8fVkpByq8"
+    },
+     {
       "id":"19",
       "Title": "HackFest NCIT 2024",
       "By": "NOSK & NCIT",
