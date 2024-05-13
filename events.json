@@ -1,4 +1,13 @@
-[    {
+[   
+    {
+      "id": "21",
+      "Title": "3 Days Workshop on Linux for Beginners",
+      "By": "Abhilekh Gautam and Bishal Poudel",
+      "Date": "18-05-2024",
+      "Time": "10:40",
+      "URL": "https://forms.gle/Kn4iodnwrH8kJiNV6"
+    },	
+    {
       "id":"20",
       "Title": "Workshop on Spring Boot and Spring Security",
       "By": "Sarthak Paneru",
