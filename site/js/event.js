@@ -6,7 +6,7 @@ let today_date = date.getDate();
 let today_year = date.getFullYear();
 let curr_hour = date.getHours();
 
-/* Read a json file that contents data about Events */
+/* Read a json file that contains data about Events */
 fetch('/events.json')
 .then((data)=> data.json())
 .then((data)=>{
@@ -35,7 +35,10 @@ fetch('/events.json')
    if (event_status != "Completed"){
       title.href = elt.URL;
    }else{
-      title.href = elt.IMGURL;
+      if (elt.IMGURL)
+        title.href = elt.IMGURL;
+      else 
+	 title.href = elt.URL;
    }
     
     title.classList.add('event-title');
