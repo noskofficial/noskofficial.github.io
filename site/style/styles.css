@@ -1,8 +1,12 @@
+body {
+  background: url('https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .my-header {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  background: url(https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80);
   padding: 5px;
 }
 
