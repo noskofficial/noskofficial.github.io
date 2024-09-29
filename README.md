@@ -3,6 +3,11 @@ This is the official website for NOSK - Nepal Open Source Klub. NOSK is a group 
 FOSS( Free and Open Source Software). We being at the club aims to educate and train people of different domains of technology  by organizing different 
 events and sessions time and often.
 
+## Hacktoberfest Participation
+
+This project is also open for **[Hacktoberfest](https://hacktoberfest.com/)** contributions! Please follow the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more information on how to contribute and be part of Hacktoberfest.
+
+As an open source community, we welcome contributions from everyone!
 
 # How to Contribute
 1. Fork the project
