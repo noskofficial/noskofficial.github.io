@@ -1,4 +1,4 @@
-# Contribution Guide for NOSK Official Website 🌐
+# Contribution Guide for NOSK Official Website (Hacktoberfest) 🌐
 
 Welcome to the NOSK Official Website repository! We appreciate your interest in contributing to the development of the official website. Follow these steps to make your contributions.
 
