@@ -1,6 +1,6 @@
-# Contribution Guide for NOSK Official Website (Hacktoberfest) 🌐
+# Contribution Guide for NOSK Official Website🌐
 
-Welcome to the NOSK Official Website repository! We appreciate your interest in contributing to the development of the official website. Follow these steps to make your contributions.
+Welcome to the NOSK Official Website repository! We appreciate your interest in contributing to the development of the official website. We have added this project as part of **Hacktoberfest 2024**, and we welcome new contributors and public contributions too. Follow these steps to make your contributions.
 
 ## How to Contribute
 
@@ -80,4 +80,3 @@ If you have any questions, feel free to reach out to the maintainers or open an 
 
 ### Maintainers:
 - [NOSK](mailto:nosk@ncit.edu.np)
-
