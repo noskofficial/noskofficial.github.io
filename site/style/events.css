@@ -1,14 +1,36 @@
-.event-title{
-    font-size: 25px !important;
-    display: inline-block;
+.event-title {
+  font-size: 25px !important;
+  display: inline-block;
 }
-.event-title:hover{
-    background-color: antiquewhite;
+.event-title:hover {
+  background-color: antiquewhite;
 }
-.event-status{
-    font-size: 19px;
-    color:blue;
+.event-status {
+  font-size: 19px;
+  color: blue;
 }
-.event-guest{
-    font-style: italic;
+.event-guest {
+  font-style: italic;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+.pagination button {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+.pagination button:hover:not(.active) {
+  background-color: #ddd;
+}
+.pagination button.active {
+  background-color: #689775;
+  color: white;
 }
