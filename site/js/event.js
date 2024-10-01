@@ -77,9 +77,13 @@ function createPaginationControls() {
   for (let i = 1; i <= totalPages; i++) {
     const button = document.createElement("button");
     button.textContent = i;
+    if (i === currentPage) {
+      button.classList.add("active");
+    }
     button.addEventListener("click", () => {
       currentPage = i;
       renderEvents();
+      createPaginationControls();
     });
     paginationControls.appendChild(button);
   }

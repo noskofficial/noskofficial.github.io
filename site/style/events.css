@@ -30,3 +30,7 @@
 .pagination button:hover:not(.active) {
   background-color: #ddd;
 }
+.pagination button.active {
+  background-color: #689775;
+  color: white;
+}
