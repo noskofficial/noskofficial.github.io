@@ -63,8 +63,7 @@ fetch('/events.json')
        guest.appendChild(document.createTextNode(', '));
      }
    });
-
-
+   
    container.appendChild(title);
    container.appendChild(status);
    container.appendChild(guest);
