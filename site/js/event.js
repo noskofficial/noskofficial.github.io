@@ -40,14 +40,22 @@ fetch('/events.json')
       else 
 	 title.href = elt.URL;
    }
+
+   //For Profile link 
+   const profileLink = document.createElement('a');
+   profileLink.href = elt.ProfileLink || '#'; 
+   profileLink.innerText = elt.By;
+   profileLink.target = '_blank'; 
+   profileLink.classList.add('profile-link'); 
     
     title.classList.add('event-title');
     status.classList.add('event-status');
     guest.classList.add('event-guest');
 
-    title.innerText  = elt.Title;
-    status.innerText = "Status:" + event_status;
-    guest.innerText  = "By:" + elt.By;
+    title.innerText = elt.Title;
+    status.innerText = "Status: " + event_status;
+    guest.innerText = "By: ";
+    guest.appendChild(profileLink);
 
     container.appendChild(title)
     container.appendChild(status)

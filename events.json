@@ -5,7 +5,8 @@
       "By": "NOSK Contributors",
       "Date": "21-09-2024",
       "Time": "09:00",
-      "URL": "https://sfd.nosk.org.np"
+      "URL": "https://sfd.nosk.org.np",
+      "ProfileLink": "https://sfd.nosk.org.np" 
     },	
     {
       "id": "23",
@@ -13,7 +14,8 @@
       "By": "Prince Kushwaha",
       "Date": "08-06-2024",
       "Time": "12:30",
-      "URL": "https://forms.gle/9nooFZPCZxinwHjo8"
+      "URL": "https://forms.gle/9nooFZPCZxinwHjo8",
+      "ProfileLink": ""
     },	
     {
       "id": "22",
@@ -22,7 +24,8 @@
       "Date": "01-06-2024",
       "Time": "10:30",
       "URL": "https://forms.gle/vMyq8eLNYfr48jpA7",
-      "IMGURL":"/site/html/gallery.html#linux-workshop-2024"
+      "IMGURL":"/site/html/gallery.html#linux-workshop-2024",
+      "ProfileLink": ""
 
     },
     {
@@ -31,7 +34,8 @@
       "By": "Abhilekh Gautam and Bishal Poudel",
       "Date": "18-05-2024",
       "Time": "10:40",
-      "URL": "https://forms.gle/Kn4iodnwrH8kJiNV6"
+      "URL": "https://forms.gle/Kn4iodnwrH8kJiNV6",
+      "ProfileLink": ""
     },	
     {
       "id":"20",
@@ -39,7 +43,8 @@
       "By": "Sarthak Paneru",
       "Date": "28-04-2024",
       "Time":"12:10",
-      "URL": "https://forms.gle/to56o58T8fVkpByq8"
+      "URL": "https://forms.gle/to56o58T8fVkpByq8",
+      "ProfileLink": ""
     },
      {
       "id":"19",
@@ -47,7 +52,8 @@
       "By": "NOSK & NCIT",
       "Date": "11-01-2024",
       "Time":"7",
-      "URL": "https://forms.gle/9sy1e3rPq1DemwtK8"
+      "URL": "https://forms.gle/9sy1e3rPq1DemwtK8",
+      "ProfileLink": ""
     },
     {
       "id":"18",
@@ -55,7 +61,8 @@
       "By": "Abhilekh Gautam and Pratik Devkota",
       "Date":"16-12-2023",
       "Time":"11:00",
-      "URL":""
+      "URL":"",
+      "ProfileLink": ""
     },
     {
       "id":"17",
@@ -63,7 +70,8 @@
       "By": "Satya Raj Awasthi",
       "Date":"15-12-2023",
       "Time":"10:40",
-      "URL":""
+      "URL":"",
+      "ProfileLink": ""
     },	
     {
       "id":"16",
@@ -71,7 +79,8 @@
       "By": "Justin W Flory",
       "Date": "06-12-2023",
       "Time":"10:30",
-      "URL":""
+      "URL":"",
+      "ProfileLink": ""
     },	
     {
         "id":"15",
@@ -79,7 +88,8 @@
         "By": "NOSK Contributors & FOSS Lovers",
         "Date": "16-09-2023",
         "Time": "09:00",
-        "IMGURL":"https://sfd.nosk.org.np/"
+        "IMGURL":"https://sfd.nosk.org.np/",
+        "ProfileLink": ""
     },
     {
         "id":"14",
@@ -88,7 +98,8 @@
         "Date": "27-7-2023",
         "Time": "11:00",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#ncit-project-exhibition-2023"
+        "IMGURL":"/site/html/gallery.html#ncit-project-exhibition-2023",
+        "ProfileLink": ""
     },
     {
         "id":"13",
@@ -97,7 +108,8 @@
         "Date": "22-7-2023",
         "Time": "10:30",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay5"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay5",
+        "ProfileLink": ""
     },
     {
         "id":"12",
@@ -106,7 +118,8 @@
         "Date": "15-7-2023",
         "Time": "10:30",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay4"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay4",
+        "ProfileLink": ""
     },
     {
         "id":"11",
@@ -115,7 +128,8 @@
         "Date": "8-7-2023",
         "Time": "11:00",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay3"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay3",
+        "ProfileLink": ""
     },
     {
         "id":"10",
@@ -124,7 +138,8 @@
         "Date": "2-7-2023",
         "Time": "11:00",
         "URL":"https://forms.gle/6wTc2qRBgta46h9p9",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay2"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay2",
+        "ProfileLink": ""
     },
     {
         "id":"9",
@@ -133,7 +148,8 @@
         "Date": "25-6-2023",
         "Time": "10:30",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay1"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay1",
+        "ProfileLink": ""
     },
     {   
         "id":"8",
@@ -142,7 +158,8 @@
         "Date": "18-6-2023",
         "Time": "10:00",
         "URL":"https://bit.ly/nosk-project-management",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay0"
+        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay0",
+        "ProfileLink": ""
     },
     {
         "id":"7",
@@ -151,7 +168,8 @@
         "Date": "21-5-2023",
         "Time": "11:00",
         "URL":"https://bit.ly/experience-sharing-nosk",
-        "IMGURL":"/site/html/gallery.html#IntractiveSessionWithSeniors"
+        "IMGURL":"/site/html/gallery.html#IntractiveSessionWithSeniors",
+        "ProfileLink": ""
     },
     {
 
@@ -161,7 +179,8 @@
         "Date": "14-5-2023",
         "Time": "14:00",
         "URL":"https://shorturl.at/aBSU8",
-        "IMGURL":"/site/html/gallery.html#OpenStreetMap"
+        "IMGURL":"/site/html/gallery.html#OpenStreetMap",
+        "ProfileLink": ""
     },
     {
         "id":"5",
@@ -170,7 +189,8 @@
         "Date": "4-2-2023",
         "Time": "14:00",
         "URL":"https://www.bit.ly/nosk-talkfoss",
-        "IMGURL":"/site/html/gallery.html#BRG_linux"
+        "IMGURL":"/site/html/gallery.html#BRG_linux",
+        "ProfileLink": ""
     },
     {
         "id":"4",
@@ -179,7 +199,8 @@
         "Date":"15-12-2022",
         "Time": "14:00",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#RD_gamedev"
+        "IMGURL":"/site/html/gallery.html#RD_gamedev",
+        "ProfileLink": ""
     },
     {
         "id":"3",
@@ -188,7 +209,8 @@
         "Date":"1-1-2023",
         "Time": "14:00",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#BP_linux"
+        "IMGURL":"/site/html/gallery.html#BP_linux",
+        "ProfileLink": ""
     },
     {
         "id":"2",
@@ -197,7 +219,8 @@
         "Date":"26-11-2022",
         "Time": "14:00",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#SP_linkedlist"
+        "IMGURL":"/site/html/gallery.html#SP_linkedlist",
+        "ProfileLink": ""
     },
     {
         "id":"1",
@@ -206,6 +229,7 @@
         "Date":"16-11-2022",
         "Time": "14:00",
         "URL":"",
-        "IMGURL":"/site/html/gallery.html#CH_programming"
+        "IMGURL":"/site/html/gallery.html#CH_programming",
+        "ProfileLink": ""
     }
 ]
