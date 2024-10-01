@@ -1,5 +1,3 @@
-const events_div = document.getElementById('event-list');
-
 let date = new Date();
 let today_month = date.getMonth();
 let today_date = date.getDate();
@@ -41,27 +39,36 @@ fetch('/events.json')
 	 title.href = elt.URL;
    }
 
-   //For Profile link 
-   const profileLink = document.createElement('a');
-   profileLink.href = elt.ProfileLink || '#'; 
-   profileLink.innerText = elt.By;
-   profileLink.target = '_blank'; 
-   profileLink.classList.add('profile-link'); 
-    
-    title.classList.add('event-title');
-    status.classList.add('event-status');
-    guest.classList.add('event-guest');
 
-    title.innerText = elt.Title;
-    status.innerText = "Status: " + event_status;
-    guest.innerText = "By: ";
-    guest.appendChild(profileLink);
 
-    container.appendChild(title)
-    container.appendChild(status)
-    container.appendChild(guest)
+   title.innerText = elt.Title;
+   title.classList.add('event-title');
+   status.innerText = `Status: ${event_status}`;
+   status.classList.add('event-status');
+   guest.innerText = "By: ";
+   guest.classList.add('event-guest');
 
-    events_div.appendChild(container)
+ 
+   elt.By.forEach((collaborator, index) => {
+     const profileLink = document.createElement('a');
+     profileLink.href = elt.ProfileLink[index] || '#';
+     profileLink.innerText = collaborator; 
+     profileLink.target = '_blank'; 
+     profileLink.classList.add('profile-link');
 
+     guest.appendChild(profileLink);
+
+
+     if (index < elt.By.length - 1) {
+       guest.appendChild(document.createTextNode(', '));
+     }
    });
-})
+
+
+   container.appendChild(title);
+   container.appendChild(status);
+   container.appendChild(guest);
+   const events_div = document.getElementById('event-list');
+   events_div.appendChild(container);
+ });
+});
