@@ -199,25 +199,25 @@ body {
 
 /* BACK to top button  */
 #btn-back-to-top {
+  
+  z-index: 99;
   position: fixed;
   bottom: 20px;
   right: 20px;
   display: none;
 }
 
-#btn-back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: none;
+
+
+
+@media (max-width: 768px) {
+  #btn-back-to-top {
+      bottom: 10px;
+      right: 10px;
+      padding: 10px;
+      font-size: 16px;
+  }
 }
-
-/* @media (min-width: 992px) {
-    .offcanvas{
-        visibility: visible !important;
-    }
-} */
-
 @media (max-width: 992px) {
   .navbar-collapse {
     transition: visibility 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
