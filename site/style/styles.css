@@ -96,7 +96,7 @@ body {
 
 .description-text {
   font-family: "Unbounded", cursive;
-  border-right: 0.15em solid black;
+  border-right: 0.15em solid transparent;
   /* The cursor */
   overflow: hidden;
   /* Ensures the content is not revealed until the animation */
@@ -107,7 +107,24 @@ body {
   white-space: nowrap;
   /* Keeps the content on a single line */
   margin: 0 auto;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end 5;
+}
+
+.description-subtext {
+  font-family: "Unbounded", cursive;
+  border-right: 0.15em solid transparent;
+  /* The cursor */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  font-weight: 250;
+  line-height: 2;
+  font-size: 1.8rem;
+  text-align: center;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  width: 0;
+  animation: typing 3.5s steps(40, end) 3.5s forwards, blink-caret 0.75s step-end infinite 3.5s forwards;
 }
 
 @keyframes typing {
