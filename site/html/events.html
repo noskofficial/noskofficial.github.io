@@ -1,85 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Bootstrap 5:-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
     <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans&display=swap"
+      rel="stylesheet"
+    />
     <!--Add custom style sheets below this comment-->
-    <link href="/site/style/styles.css" rel="stylesheet">
-    <link href="/site/style/events.css" rel="stylesheet">
+    <link href="/site/style/styles.css" rel="stylesheet" />
+    <link href="/site/style/events.css" rel="stylesheet" />
 
     <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
-    
+    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico" />
+
     <!--Js Requirements for Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
-    <script type = "module" src="/site/js/event.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script type="module" src="/site/js/event.js" defer></script>
     <title>NOSK - Events</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <!-- Navbar Starts Here-->
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
-            
-              <!-- Load NOSK Logo-->
-              <div class="d-flex flex-column align-items-center">
-                <a class="navbar-brand" href="/">
-                  <img src="/site/images/nosk-logo.png" alt="Logo of Nepal Open Source Klub" width="120" height="120">
-                </a>
-                <p class="fullform">Nepal Open Source Klub</p>
-              </div>
-              
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" tabindex="-1" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbar"></span>
-            </button>
-            <!--Navbar Item Starts here-->
-            <div class="offcanvas-lg offcanvas-end" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul id = "nav-list" class="navbar-nav">
-                 <li class="nav-item">
-                   <a class="nav-link" href="/">Home</a>
-                 </li>
-                 <li class="nav-item">
+      <!-- Navbar Starts Here-->
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Load NOSK Logo-->
+          <div class="d-flex flex-column align-items-center">
+            <a class="navbar-brand" href="/">
+              <img
+                src="/site/images/nosk-logo.png"
+                alt="Logo of Nepal Open Source Klub"
+                width="120"
+                height="120"
+              />
+            </a>
+            <p class="fullform">Nepal Open Source Klub</p>
+          </div>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            tabindex="-1"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span
+              class="navbar-toggler-icon"
+              data-bs-target="#offcanvasNavbar"
+            ></span>
+          </button>
+          <!--Navbar Item Starts here-->
+          <div class="offcanvas-lg offcanvas-end" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close text-reset"
+                data-bs-dismiss="offcanvas"
+                data-bs-target="#offcanvasNavbar"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul id="nav-list" class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="/site/html/about.html">About</a>
-                 </li>
-                 <li class="nav-item">
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="/site/html/gallery.html">Gallery</a>
-                 </li>
-                 <li class="nav-item active">
+                </li>
+                <li class="nav-item active">
                   <a class="nav-link" href="/site/html/events.html">Events</a>
-                 </li>
-                 <li class="nav-item">
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="/site/html/contact.html">Contact</a>
-                 </li>
-                 <li class="nav-item">
+                </li>
+                <li class="nav-item">
                   <a class="nav-link" href="https://blog.nosk.org.np/">Blog</a>
                 </li>
-                </ul>
-              </div>
+              </ul>
             </div>
-            <!--Navbar Item Ends here-->
           </div>
-        </nav>
-          <!-- Navbar Ends Here-->
-
-    </header>
-        <div class="container d-flex flex-column align-items-center justify-content-center">
-        <div id="event-list">
-            <!-- Javascript will add element, refer to /site/js/event.js-->
+          <!--Navbar Item Ends here-->
         </div>
-    </div>
-</body>
+      </nav>
+      <!-- Navbar Ends Here-->
+    </header>
+    <div
+      class="container d-flex flex-column align-items-center justify-content-center"
+    >
+    <div id="event-list" class="event-grid "></div>
+    <div id="pagination-container" class="pagination-container"></div>
+     
+  </body>
 </html>

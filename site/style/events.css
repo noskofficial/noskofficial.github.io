@@ -1,14 +1,99 @@
-.event-title{
-    font-size: 25px !important;
-    display: inline-block;
+.event-container {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-.event-title:hover{
-    background-color: antiquewhite;
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
-.event-status{
-    font-size: 19px;
-    color:blue;
+
+@media (max-width: 1024px) {
+  .event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
-.event-guest{
-    font-style: italic;
+
+@media (max-width: 768px) {
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Event title styles */
+.event-title {
+  font-size: 1.4rem;
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 8px;
+  background-color: transparent;
+}
+
+/* Event title hover effect */
+.event-title:hover {
+  color: #003a80;
+  font-size: 1.4rem;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.event-details {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.event-status {
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.event-status.completed {
+  background-color: #065c1e26;
+  opacity: 10;
+  color: #137333;
+  width: 100px;
+  border: transparent;
+}
+
+.event-status.registration-open {
+  background-color: rgba(254, 240, 138, var(--tw-bg-opacity, 1));
+  opacity: 1;
+  color: rgba(133 77 14 / var(--tw-text-opacity, 1));
+  width: 160px;
+  border: transparent;
+}
+
+.event-guest {
+  font-weight: 500;
+}
+
+.event-contributors {
+  color: #6c757d; /* Gray for contributor names */
+  font-size: 0.9rem;
+}
+
+/* Pagination container at the bottom */
+.pagination-container {
+  text-align: center;
+  margin-top: 5px; /* Add space above pagination */
+  position: relative; /* Ensure pagination is positioned after the event list */
+}
+
+/* Additional space at the bottom of the event list to prevent overlap */
+#event-list {
+  padding-bottom: 25px; /* Adjust as necessary for larger pagination controls */
+}
+
+.pagination-container button {
+  margin: 0 5px;
 }
