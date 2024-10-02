@@ -1,211 +1,209 @@
-[   
-     {
-      "id": "24",
-      "Title": "Software Freedom Day 2024",
-      "By": "NOSK Contributors",
-      "Date": "21-09-2024",
-      "Time": "09:00",
-      "URL": "https://sfd.nosk.org.np"
-    },	
-    {
-      "id": "23",
-      "Title": "Graphics Design Workshop for Beginners",
-      "By": "Prince Kushwaha",
-      "Date": "08-06-2024",
-      "Time": "12:30",
-      "URL": "https://forms.gle/9nooFZPCZxinwHjo8"
-    },	
-    {
-      "id": "22",
-      "Title": "Python Workshop for Beginners",
-      "By": "Nabin Paudel, Sanjib Shah Thakuri and Aman Sheikh",
-      "Date": "01-06-2024",
-      "Time": "10:30",
-      "URL": "https://forms.gle/vMyq8eLNYfr48jpA7",
-      "IMGURL":"/site/html/gallery.html#linux-workshop-2024"
-
-    },
-    {
-      "id": "21",
-      "Title": "3 Days Workshop on Linux for Beginners",
-      "By": "Abhilekh Gautam and Bishal Poudel",
-      "Date": "18-05-2024",
-      "Time": "10:40",
-      "URL": "https://forms.gle/Kn4iodnwrH8kJiNV6"
-    },	
-    {
-      "id":"20",
-      "Title": "Workshop on Spring Boot and Spring Security",
-      "By": "Sarthak Paneru",
-      "Date": "28-04-2024",
-      "Time":"12:10",
-      "URL": "https://forms.gle/to56o58T8fVkpByq8"
-    },
-     {
-      "id":"19",
-      "Title": "HackFest NCIT 2024",
-      "By": "NOSK & NCIT",
-      "Date": "11-01-2024",
-      "Time":"7",
-      "URL": "https://forms.gle/9sy1e3rPq1DemwtK8"
-    },
-    {
-      "id":"18",
-      "Title":"Day 2 Git and Github Workshop",
-      "By": "Abhilekh Gautam and Pratik Devkota",
-      "Date":"16-12-2023",
-      "Time":"11:00",
-      "URL":""
-    },
-    {
-      "id":"17",
-      "Title":"Day 1 Git and Github Workshop",
-      "By": "Satya Raj Awasthi",
-      "Date":"15-12-2023",
-      "Time":"10:40",
-      "URL":""
-    },	
-    {
-      "id":"16",
-      "Title":"Open Source and Tech Career",
-      "By": "Justin W Flory",
-      "Date": "06-12-2023",
-      "Time":"10:30",
-      "URL":""
-    },	
-    {
-        "id":"15",
-        "Title":"SOFTWARE FREEDOM DAY 2023",
-        "By": "NOSK Contributors & FOSS Lovers",
-        "Date": "16-09-2023",
-        "Time": "09:00",
-        "IMGURL":"https://sfd.nosk.org.np/"
-    },
-    {
-        "id":"14",
-        "Title":"Project Exhibition and Career Fair at NCIT",
-        "By": "NCIT",
-        "Date": "27-7-2023",
-        "Time": "11:00",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#ncit-project-exhibition-2023"
-    },
-    {
-        "id":"13",
-        "Title":"Web Development Training - Day 5",
-        "By": "NOSK",
-        "Date": "22-7-2023",
-        "Time": "10:30",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay5"
-    },
-    {
-        "id":"12",
-        "Title":"Web Development Training - Day 4",
-        "By": "NOSK",
-        "Date": "15-7-2023",
-        "Time": "10:30",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay4"
-    },
-    {
-        "id":"11",
-        "Title":"Web Development Training - Day 3",
-        "By": "NOSK",
-        "Date": "8-7-2023",
-        "Time": "11:00",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay3"
-    },
-    {
-        "id":"10",
-        "Title":"QA as a career (WebDevTraining - Day 2)",
-        "By": "Suhent Bikram Ran",
-        "Date": "2-7-2023",
-        "Time": "11:00",
-        "URL":"https://forms.gle/6wTc2qRBgta46h9p9",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay2"
-    },
-    {
-        "id":"9",
-        "Title":"Web Development Training - Day 1",
-        "By": "NOSK",
-        "Date": "25-6-2023",
-        "Time": "10:30",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay1"
-    },
-    {   
-        "id":"8",
-        "Title":"Kickoff Career in IT as a Project Manager; Is it right for Me? (WebDevTraining - Day 0)",
-        "By": "Yukta Sharma",
-        "Date": "18-6-2023",
-        "Time": "10:00",
-        "URL":"https://bit.ly/nosk-project-management",
-        "IMGURL":"/site/html/gallery.html#WebDevTrainingDay0"
-    },
-    {
-        "id":"7",
-        "Title":"Experience Exchange and Question Answer Session with Seniors",
-        "By": "NOSK Contributors",
-        "Date": "21-5-2023",
-        "Time": "11:00",
-        "URL":"https://bit.ly/experience-sharing-nosk",
-        "IMGURL":"/site/html/gallery.html#IntractiveSessionWithSeniors"
-    },
-    {
-
-        "id":"6",
-        "Title":"Getting Started with OpenStreetMap",
-        "By": "NOSK",
-        "Date": "14-5-2023",
-        "Time": "14:00",
-        "URL":"https://shorturl.at/aBSU8",
-        "IMGURL":"/site/html/gallery.html#OpenStreetMap"
-    },
-    {
-        "id":"5",
-        "Title":"Talk on Open Source and Linux",
-        "By": "Budh Ram Gurung",
-        "Date": "4-2-2023",
-        "Time": "14:00",
-        "URL":"https://www.bit.ly/nosk-talkfoss",
-        "IMGURL":"/site/html/gallery.html#BRG_linux"
-    },
-    {
-        "id":"4",
-        "Title":"Basics of Game Development",
-        "By":"Royan Duju",
-        "Date":"15-12-2022",
-        "Time": "14:00",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#RD_gamedev"
-    },
-    {
-        "id":"3",
-        "Title":"Linux - The Revolution",
-        "By":"Bishal Poudel",
-        "Date":"1-1-2023",
-        "Time": "14:00",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#BP_linux"
-    },
-    {
-        "id":"2",
-        "Title":"Linked List Implementation in Java",
-        "By":"Sarthak Paneru",
-        "Date":"26-11-2022",
-        "Time": "14:00",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#SP_linkedlist"
-    },
-    {
-        "id":"1",
-        "Title":"Programming Journey with Open Source and Future of Programming Language",
-        "By":"Christian Hujer",
-        "Date":"16-11-2022",
-        "Time": "14:00",
-        "URL":"",
-        "IMGURL":"/site/html/gallery.html#CH_programming"
-    }
+[
+  {
+    "id": "24",
+    "Title": "Software Freedom Day 2024",
+    "By": "NOSK Contributors",
+    "Date": "21-09-2024",
+    "Time": "09:00",
+    "URL": "https://sfd.nosk.org.np"
+  },
+  {
+    "id": "23",
+    "Title": "Graphics Design Workshop for Beginners",
+    "By": "Prince Kushwaha",
+    "Date": "08-06-2024",
+    "Time": "12:30",
+    "URL": "https://forms.gle/9nooFZPCZxinwHjo8"
+  },
+  {
+    "id": "22",
+    "Title": "Python Workshop for Beginners",
+    "By": "Nabin Paudel, Sanjib Shah Thakuri and Aman Sheikh",
+    "Date": "01-06-2024",
+    "Time": "10:30",
+    "URL": "https://forms.gle/vMyq8eLNYfr48jpA7",
+    "IMGURL": "/site/html/gallery.html#linux-workshop-2024"
+  },
+  {
+    "id": "21",
+    "Title": "3 Days Workshop on Linux for Beginners",
+    "By": "Abhilekh Gautam and Bishal Poudel",
+    "Date": "18-05-2024",
+    "Time": "10:40",
+    "URL": "https://forms.gle/Kn4iodnwrH8kJiNV6"
+  },
+  {
+    "id": "20",
+    "Title": "Workshop on Spring Boot and Spring Security",
+    "By": "Sarthak Paneru",
+    "Date": "28-04-2024",
+    "Time": "12:10",
+    "URL": "https://forms.gle/to56o58T8fVkpByq8"
+  },
+  {
+    "id": "19",
+    "Title": "HackFest NCIT 2024",
+    "By": "NOSK & NCIT",
+    "Date": "11-01-2024",
+    "Time": "7",
+    "URL": "https://forms.gle/9sy1e3rPq1DemwtK8"
+  },
+  {
+    "id": "18",
+    "Title": "Day 2 Git and Github Workshop",
+    "By": "Abhilekh Gautam and Pratik Devkota",
+    "Date": "16-12-2023",
+    "Time": "11:00",
+    "URL": ""
+  },
+  {
+    "id": "17",
+    "Title": "Day 1 Git and Github Workshop",
+    "By": "Satya Raj Awasthi",
+    "Date": "15-12-2023",
+    "Time": "10:40",
+    "URL": ""
+  },
+  {
+    "id": "16",
+    "Title": "Open Source and Tech Career",
+    "By": "Justin W Flory",
+    "Date": "06-12-2023",
+    "Time": "10:30",
+    "URL": ""
+  },
+  {
+    "id": "15",
+    "Title": "SOFTWARE FREEDOM DAY 2023",
+    "By": "NOSK Contributors & FOSS Lovers",
+    "Date": "16-09-2023",
+    "Time": "09:00",
+    "IMGURL": "https://sfd.nosk.org.np/"
+  },
+  {
+    "id": "14",
+    "Title": "Project Exhibition and Career Fair at NCIT",
+    "By": "NCIT",
+    "Date": "27-7-2023",
+    "Time": "11:00",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#ncit-project-exhibition-2023"
+  },
+  {
+    "id": "13",
+    "Title": "Web Development Training - Day 5",
+    "By": "NOSK",
+    "Date": "22-7-2023",
+    "Time": "10:30",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#WebDevTrainingDay5"
+  },
+  {
+    "id": "12",
+    "Title": "Web Development Training - Day 4",
+    "By": "NOSK",
+    "Date": "15-7-2023",
+    "Time": "10:30",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#WebDevTrainingDay4"
+  },
+  {
+    "id": "11",
+    "Title": "Web Development Training - Day 3",
+    "By": "NOSK",
+    "Date": "8-7-2023",
+    "Time": "11:00",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#WebDevTrainingDay3"
+  },
+  {
+    "id": "10",
+    "Title": "QA as a career (WebDevTraining - Day 2)",
+    "By": "Suhent Bikram Ran",
+    "Date": "2-7-2023",
+    "Time": "11:00",
+    "URL": "https://forms.gle/6wTc2qRBgta46h9p9",
+    "IMGURL": "/site/html/gallery.html#WebDevTrainingDay2"
+  },
+  {
+    "id": "9",
+    "Title": "Web Development Training - Day 1",
+    "By": "NOSK",
+    "Date": "25-6-2023",
+    "Time": "10:30",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#WebDevTrainingDay1"
+  },
+  {
+    "id": "8",
+    "Title": "Kickoff Career in IT as a Project Manager; Is it right for Me? (WebDevTraining - Day 0)",
+    "By": "Yukta Sharma",
+    "Date": "18-6-2023",
+    "Time": "10:00",
+    "URL": "https://bit.ly/nosk-project-management",
+    "IMGURL": "/site/html/gallery.html#WebDevTrainingDay0"
+  },
+  {
+    "id": "7",
+    "Title": "Experience Exchange and Question Answer Session with Seniors",
+    "By": "NOSK Contributors",
+    "Date": "21-5-2023",
+    "Time": "11:00",
+    "URL": "https://bit.ly/experience-sharing-nosk",
+    "IMGURL": "/site/html/gallery.html#IntractiveSessionWithSeniors"
+  },
+  {
+    "id": "6",
+    "Title": "Getting Started with OpenStreetMap",
+    "By": "NOSK",
+    "Date": "14-5-2023",
+    "Time": "14:00",
+    "URL": "https://shorturl.at/aBSU8",
+    "IMGURL": "/site/html/gallery.html#OpenStreetMap"
+  },
+  {
+    "id": "5",
+    "Title": "Talk on Open Source and Linux",
+    "By": "Budh Ram Gurung",
+    "Date": "4-2-2023",
+    "Time": "14:00",
+    "URL": "https://www.bit.ly/nosk-talkfoss",
+    "IMGURL": "/site/html/gallery.html#BRG_linux"
+  },
+  {
+    "id": "4",
+    "Title": "Basics of Game Development",
+    "By": "Royan Duju",
+    "Date": "15-12-2022",
+    "Time": "14:00",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#RD_gamedev"
+  },
+  {
+    "id": "3",
+    "Title": "Linux - The Revolution",
+    "By": "Bishal Poudel",
+    "Date": "1-1-2023",
+    "Time": "14:00",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#BP_linux"
+  },
+  {
+    "id": "2",
+    "Title": "Linked List Implementation in Java",
+    "By": "Sarthak Paneru",
+    "Date": "26-11-2022",
+    "Time": "14:00",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#SP_linkedlist"
+  },
+  {
+    "id": "1",
+    "Title": "Programming Journey with Open Source and Future of Programming Language",
+    "By": "Christian Hujer",
+    "Date": "16-11-2022",
+    "Time": "14:00",
+    "URL": "",
+    "IMGURL": "/site/html/gallery.html#CH_programming"
+  }
 ]
