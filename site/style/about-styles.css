@@ -2,12 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Slab:wght@400;700&display=swap');
 
 body {
-    font-family: 'Poppins', sans-serif;
+    
     line-height: 1.6;
     color: #333;
 }
 
 main {
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     max-width: 800px;
     margin: 0 auto;
