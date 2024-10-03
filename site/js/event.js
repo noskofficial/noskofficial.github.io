@@ -24,12 +24,12 @@ paginationContainer.classList.add(
 const prevButton = document.createElement("button");
 prevButton.innerText = "Previous";
 prevButton.classList.add("btn", "btn-primary", "mx-2");
-prevButton.disabled = true; 
+prevButton.disabled = true;
 prevButton.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
     renderEvents();
-    updatePaginationButtons(); 
+    updatePaginationButtons();
   }
 });
 
@@ -41,7 +41,7 @@ nextButton.addEventListener("click", () => {
   if (currentPage < totalPages) {
     currentPage++;
     renderEvents();
-    updatePaginationButtons(); 
+    updatePaginationButtons();
   }
 });
 
@@ -54,21 +54,21 @@ document.body.appendChild(paginationContainer);
 fetch("/events.json")
   .then((data) => data.json())
   .then((data) => {
-    allEvents = data; 
-    totalPages = Math.ceil(allEvents.length / eventsPerPage); 
-    renderEvents(); 
+    allEvents = data;
+    totalPages = Math.ceil(allEvents.length / eventsPerPage);
+    renderEvents();
     updatePaginationButtons();
   });
 
 /* Render events based on the current page */
 function renderEvents() {
-  events_div.innerHTML = ""; 
+  events_div.innerHTML = "";
   const eventGrid = document.createElement("div");
   eventGrid.classList.add("event-grid");
 
   const start = (currentPage - 1) * eventsPerPage;
   const end = start + eventsPerPage;
-  const paginatedEvents = allEvents.slice(start, end); 
+  const paginatedEvents = allEvents.slice(start, end);
 
   // Loop through and display each event
   paginatedEvents.forEach((elt) => {
@@ -80,7 +80,6 @@ function renderEvents() {
 
     const title = document.createElement("a");
     const status = document.createElement("span");
-    const date = document.createElement("p");
     const guest = document.createElement("p");
 
     const start_detail = elt.Date.split("-");
@@ -91,12 +90,19 @@ function renderEvents() {
     if (today_year < start_detail[2]) event_status = "Registration Open";
     else if (today_year == start_detail[2] && today_month + 1 < start_detail[1])
       event_status = "Registration Open";
-    else if (today_year == start_detail[2] && (today_month + 1) == start_detail[1] && today_date <= start_detail[0])
+    else if (today_year == start_detail[2] && today_month + 1 == start_detail[1] && today_date <= start_detail[0])
       event_status = "Registration Open";
+
+    // Apply CSS class based on event status
+    if (event_status === "Completed") {
+      status.classList.add("event-status", "completed"); 
+    } else if (event_status === "Registration Open") {
+      status.classList.add("event-status", "registration-open"); 
+    }
 
     // If event is not complete, refer to registration for the event
     // otherwise, refer to the gallery section of the corresponding event
-    if (event_status != "Completed") {
+    if (event_status !== "Completed") {
       title.href = elt.URL;
     } else {
       if (elt.IMGURL) title.href = elt.IMGURL;
@@ -105,8 +111,7 @@ function renderEvents() {
 
     title.innerText = elt.Title;
     title.classList.add("event-title");
-    status.innerText = `Status: ${event_status}`;
-    status.classList.add("event-status");
+    status.innerText = event_status;
     guest.innerText = "By: ";
     guest.classList.add("event-guest");
 
@@ -157,8 +162,8 @@ function updatePaginationButtons() {
 
     pageButton.addEventListener("click", () => {
       currentPage = i;
-      renderEvents(); 
-      updatePaginationButtons(); 
+      renderEvents();
+      updatePaginationButtons();
     });
     paginationContainer.appendChild(pageButton);
   }
