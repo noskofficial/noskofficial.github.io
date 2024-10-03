@@ -6,18 +6,6 @@ let today_date = date.getDate();
 let today_year = date.getFullYear();
 let curr_hour = date.getHours();
 
-
-/* Read a json file that contains data about Events */
-fetch('/events.json')
-.then((data)=> data.json())
-.then((data)=>{
-   data.forEach(elt => {
-
-    const container = document.createElement('div');  
-    const title = document.createElement('a');
-    const status = document.createElement('p');
-    const guest = document.createElement('p');
-
 const eventsPerPage = 6;
 let currentPage = 1;
 let totalPages = 1;
@@ -36,12 +24,12 @@ paginationContainer.classList.add(
 const prevButton = document.createElement("button");
 prevButton.innerText = "Previous";
 prevButton.classList.add("btn", "btn-primary", "mx-2");
-prevButton.disabled = true; // Initially disabled
+prevButton.disabled = true; 
 prevButton.addEventListener("click", () => {
   if (currentPage > 1) {
     currentPage--;
     renderEvents();
-    updatePaginationButtons(); // Update buttons when page changes
+    updatePaginationButtons(); 
   }
 });
 
@@ -53,7 +41,7 @@ nextButton.addEventListener("click", () => {
   if (currentPage < totalPages) {
     currentPage++;
     renderEvents();
-    updatePaginationButtons(); // Update buttons when page changes
+    updatePaginationButtons(); 
   }
 });
 
@@ -66,22 +54,21 @@ document.body.appendChild(paginationContainer);
 fetch("/events.json")
   .then((data) => data.json())
   .then((data) => {
-    allEvents = data; // Store all events
-    totalPages = Math.ceil(allEvents.length / eventsPerPage); // Calculate total pages
-    renderEvents(); // Initial render of events
-    updatePaginationButtons(); // Set up pagination after initial render
+    allEvents = data; 
+    totalPages = Math.ceil(allEvents.length / eventsPerPage); 
+    renderEvents(); 
+    updatePaginationButtons();
   });
 
 /* Render events based on the current page */
 function renderEvents() {
-  events_div.innerHTML = ""; // Clear the previous content
-
+  events_div.innerHTML = ""; 
   const eventGrid = document.createElement("div");
   eventGrid.classList.add("event-grid");
 
   const start = (currentPage - 1) * eventsPerPage;
   const end = start + eventsPerPage;
-  const paginatedEvents = allEvents.slice(start, end); // Get events for the current page
+  const paginatedEvents = allEvents.slice(start, end); 
 
   // Loop through and display each event
   paginatedEvents.forEach((elt) => {
@@ -96,64 +83,52 @@ function renderEvents() {
     const date = document.createElement("p");
     const guest = document.createElement("p");
 
-
     const start_detail = elt.Date.split("-");
     const start_time = elt.Time.split(":");
-
 
     // Determine the event status
     var event_status = "Completed";
     if (today_year < start_detail[2]) event_status = "Registration Open";
     else if (today_year == start_detail[2] && today_month + 1 < start_detail[1])
       event_status = "Registration Open";
-    else if (today_year == start_detail[2] && (today_month+1) == start_detail[1] && today_date <= start_detail[0])
+    else if (today_year == start_detail[2] && (today_month + 1) == start_detail[1] && today_date <= start_detail[0])
       event_status = "Registration Open";
 
-
-   //  If event is not complete refer to registration for event 
-   // otherwise refer to gallery section of corresponding event
-
-   if (event_status != "Completed"){
+    // If event is not complete, refer to registration for the event
+    // otherwise, refer to the gallery section of the corresponding event
+    if (event_status != "Completed") {
       title.href = elt.URL;
-   }else{
-      if (elt.IMGURL)
-        title.href = elt.IMGURL;
-      else 
-	 title.href = elt.URL;
-   }
+    } else {
+      if (elt.IMGURL) title.href = elt.IMGURL;
+      else title.href = elt.URL;
+    }
 
+    title.innerText = elt.Title;
+    title.classList.add("event-title");
+    status.innerText = `Status: ${event_status}`;
+    status.classList.add("event-status");
+    guest.innerText = "By: ";
+    guest.classList.add("event-guest");
 
+    elt.By.forEach((collaborator, index) => {
+      const profileLink = document.createElement("a");
+      profileLink.href = elt.ProfileLink[index] || "#";
+      profileLink.innerText = collaborator;
+      profileLink.target = "_blank";
+      profileLink.classList.add("profile-link");
 
-   title.innerText = elt.Title;
-   title.classList.add('event-title');
-   status.innerText = `Status: ${event_status}`;
-   status.classList.add('event-status');
-   guest.innerText = "By: ";
-   guest.classList.add('event-guest');
+      guest.appendChild(profileLink);
 
- 
-   elt.By.forEach((collaborator, index) => {
-     const profileLink = document.createElement('a');
-     profileLink.href = elt.ProfileLink[index] || '#';
-     profileLink.innerText = collaborator; 
-     profileLink.target = '_blank'; 
-     profileLink.classList.add('profile-link');
+      if (index < elt.By.length - 1) {
+        guest.appendChild(document.createTextNode(", "));
+      }
+    });
 
-     guest.appendChild(profileLink);
-
-
-     if (index < elt.By.length - 1) {
-       guest.appendChild(document.createTextNode(', '));
-     }
-   });
-
-
-   container.appendChild(title);
-   container.appendChild(status);
-   container.appendChild(guest);
-   const events_div = document.getElementById('event-list');
-   events_div.appendChild(container);
- });
+    container.appendChild(title);
+    container.appendChild(status);
+    container.appendChild(guest);
+    events_div.appendChild(container);
+  });
 
   events_div.appendChild(eventGrid);
 }
@@ -182,8 +157,8 @@ function updatePaginationButtons() {
 
     pageButton.addEventListener("click", () => {
       currentPage = i;
-      renderEvents(); // Re-render the event list for the selected page
-      updatePaginationButtons(); // Update buttons when page changes
+      renderEvents(); 
+      updatePaginationButtons(); 
     });
     paginationContainer.appendChild(pageButton);
   }
