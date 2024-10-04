@@ -78,9 +78,47 @@ body {
 
 /* hover effect on navlink end here   */
 
-.social-media a img:hover{
-    transition: 0.35s;
-    filter: drop-shadow(2px 2px 3px #031d44);  /*on hover social media shadow add*/
+@keyframes shiver {
+  0% { 
+    transform: translate(0px, 0px); 
+  }
+  25% { 
+    transform: translate(1px, -1px); 
+  }
+  50% { 
+    transform: translate(-1px, 1px); 
+  }
+  75% { 
+    transform: translate(1px, 1px); 
+  }
+  100% { 
+    transform: translate(0px, 0px); 
+  }
+}
+
+.social-media a img:hover {
+  transition: 0.35s;
+  background-color: #c2e2ec;
+  filter: drop-shadow(2px 2px 3px #031d44);  /* Adds shadow on hover */
+  animation: shiver 0.2s infinite; /* Adds shiver animation */
+}
+
+@keyframes brandColorChange {
+  0% {
+    color: green;
+  }
+  25% {
+    color: white;
+  }
+  50% {
+    color: black;
+  }
+  75% {
+    color: rgb(146, 221, 246);
+  }
+  100% {
+    color: green;
+  }
 }
 
 .brand-name {
@@ -92,6 +130,8 @@ body {
   letter-spacing: 1px;
   position: relative;
   color: green;
+  -webkit-text-stroke: 0.5px black;
+  animation: brandColorChange 25s infinite;
 }
 
 .description-text {
@@ -124,7 +164,24 @@ body {
   /* Keeps the content on a single line */
   margin: 0 auto;
   width: 0;
-  animation: typing 3.5s steps(40, end) 3.5s forwards, blink-caret 0.75s step-end infinite 3.5s forwards;
+  animation: typing 3.5s steps(40, end) 4s forwards, blink-caret 0.75s step-end 5 4s forwards;
+}
+
+.description-findushere {
+  font-family: "Unbounded", cursive;
+  border-right: 0.15em solid transparent;
+  /* The cursor */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  font-weight: 250;
+  line-height: 2;
+  font-size: 1.8rem;
+  text-align: center;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  width: 0;
+  animation: typing 3.5s steps(40, end) 8s forwards, blink-caret 0.75s step-end infinite 8s forwards;
 }
 
 @keyframes typing {
@@ -187,6 +244,7 @@ body {
   position: relative;
   margin-top: -30px;
   font-size: 12px;
+  font-family: "Unbounded", cursive;
 }
 
 .about-us {
@@ -207,6 +265,7 @@ body {
   background-color: #25a0c6;
   cursor: pointer;
   border: 1 px solid white;
+  animation: shiver 0.2s infinite;
 }
 
 .our-info {
