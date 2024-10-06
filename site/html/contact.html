@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +30,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
-    
+
+    <!-- Email Service -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "your-public-key", // add your public key from Emailjs
+          });
+      })();
+    </script>
+
+    <!-- reCaptcha -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <title>NOSK - Nepal Open Source Klub</title>
 </head>
 <body>
@@ -91,15 +105,61 @@
     <!-- Main Body Starts Here-->
     
     <!--Section: Contact -->
-<section class="mb-4 ">
+<section class="mb-4 container">
 
     <!--Section heading-->
     <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
+    
     <!--Section description-->
     <p class="text-center w-responsive mx-auto mb-5">
-    Do you have any questions? 
-    You can reach out to us via mail at <a href="mailto:nosk@ncit.edu.np">nosk@ncit.edu.np</a>
-    </p>
+      Do you have any questions?
+      <br>
+      Fill this form below or directly reach out to us via mail at <a href="mailto:nosk@ncit.edu.np">nosk@ncit.edu.np</a>
+      </p>
+    <!-- Contact Form Starts Here -->
+    <form id="contact-form" name="contact-form">
+      <div class="row mb-3">
+          <!-- Name input -->
+          <div class="col-md-6">
+              <div class="form-outline">
+                <label class="form-label" for="name">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-control" required>
+              </div>
+          </div>
+
+          <!-- Email input -->
+          <div class="col-md-6">
+              <div class="form-outline">
+                <label class="form-label" for="email">Your Email</label>
+                  <input type="email" id="email" name="email" class="form-control" required>
+              </div>
+          </div>
+      </div>
+
+      <!-- Subject input -->
+      <label class="form-label" for="subject">Subject</label>
+      <div class="form-outline mb-3">
+          <input type="text" id="subject" name="subject" class="form-control" required>
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-4">
+        <label class="form-label" for="message">Your Message</label>
+          <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+      </div>
+
+      <!-- Captcha -->
+      <div class="g-recaptcha" data-sitekey="your-sitekey"></div> <!-- add your site key from google admin console-->
+
+      <!-- Send Button -->
+      <div class="text-center">
+          <button type="submit" class="btn btn-primary" id="submit">Send Message</button>
+      </div>
+    </form>
+    <!-- Contact Form Ends Here -->
+    
+
+   
 
 
 </section>
@@ -107,5 +167,6 @@
 
     <!-- including script.js for back to top button -->
     <script src="../js/script.js"></script>
+    <script src="../js/email.js"></script>
 </body>
 </html>
