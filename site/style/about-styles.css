@@ -61,13 +61,13 @@ ul {
     margin-bottom: 0.5rem;
 }
 
-a {
+p a {
     color: #2980b9;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
+p a:hover {
     color: #3498db;
     text-decoration: underline;
 }

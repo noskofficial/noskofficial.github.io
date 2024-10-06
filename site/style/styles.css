@@ -48,7 +48,6 @@ body {
   font-size: x-large;
   text-decoration: none;
   color: #031d44;
-  padding: 10px 0px;
   margin-left: 1rem;
   display: inline-block;
   position: relative;
@@ -64,6 +63,7 @@ body {
   height: 3px;
   content: "";
   position: absolute;
+  left: 0;
   background-color: #031d44;
 }
 
