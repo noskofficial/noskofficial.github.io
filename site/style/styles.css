@@ -1,7 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
 body {
-  background: url('https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80') no-repeat center center;
+  height: 100%;
+  width: 100%;
+}
+body {
+  background: url("https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80")
+    no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+}
+body {
+  position: relative; /* Needed for the absolute positioning of the pseudo-element */
+  margin: 0; /* Reset margin for body */
+  overflow: hidden; /* Prevents the background from scrolling */
+}
+
+body::before {
+  content: "";
+  position: absolute; /* Positioning it relative to the body */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80")
+    no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: -1; /* Sends the pseudo-element behind other content */
+}
+
+body::after {
+  content: "";
+  position: absolute; /* Positioning it relative to the body */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.2); /* Black overlay with 50% opacity */
+  z-index: -1; /* Ensures it stays behind other content */
+}
+
+.content {
+  position: relative; /* Ensure content is above the pseudo-elements */
+  z-index: 1; /* Make sure content is above the background */
+  color: white; /* Change text color for visibility */
+  padding: 20px; /* Add some padding for content */
 }
 
 .my-header {
@@ -31,15 +79,17 @@ body {
   /* margin-left: 1rem; */
 }
 
-#nav-list .active {
-  background-color: rgb(130, 173, 136);
+/* Active link styling */
+.nav-link-ltr.active {
+  background-color: rgb(130, 173, 136); /* Background color */
+  border-radius: 4px;
+  color: white; /* Text color */
 }
+
 .about-us:hover {
   transition: 0.35s;
-  box-shadow:  2px 2px 2px #031d44;
+  box-shadow: 2px 2px 2px #031d44;
 }
-
-
 
 /* hover effect on nav link add  */
 
@@ -67,20 +117,31 @@ body {
   background-color: #031d44;
 }
 
+.nav-link-ltr {
+  position: relative;
+  display: inline-block; /* Ensures it wraps the text */
+}
+
 .nav-link-ltr::before {
-  width: 0%;
-  bottom: 10px;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 3px;
+  background-color: green;
+  width: 0;
+  transition: width 0.3s ease-in-out;
 }
 
 .nav-link-ltr:hover::before {
-  width: 100%;
+  width: 100%; /* Now it matches the text length */
 }
 
 /* hover effect on navlink end here   */
 
-.social-media a img:hover{
-    transition: 0.35s;
-    filter: drop-shadow(2px 2px 3px #031d44);  /*on hover social media shadow add*/
+.social-media a img:hover {
+  transition: 0.35s;
+  filter: drop-shadow(2px 2px 3px #031d44); /*on hover social media shadow add*/
 }
 
 .brand-name {
@@ -93,28 +154,25 @@ body {
   position: relative;
   color: green;
 }
-
 .description-text {
   font-family: "Unbounded", cursive;
-  border-right: 0.15em solid black;
-  /* The cursor */
-  overflow: hidden;
-  /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid black; /* The cursor */
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
   font-weight: 250;
   line-height: 2;
   font-size: 2rem;
   text-align: center;
-  white-space: nowrap;
-  /* Keeps the content on a single line */
+  white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto;
-  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3.5s steps(40, end) forwards,
+    blink-caret 0.75s step-end infinite; /* Use forwards to keep the end state */
 }
 
+/* Keyframes for typing effect */
 @keyframes typing {
   from {
     width: 0;
   }
-
   to {
     width: 100%;
   }
@@ -126,10 +184,15 @@ body {
   to {
     border-color: transparent;
   }
-
   50% {
     border-color: black;
   }
+}
+
+/* Hiding the cursor after typing */
+.finished {
+  border-right: none; /* Remove the cursor */
+  animation: none; /* Disable blinking */
 }
 
 .brand-about {
