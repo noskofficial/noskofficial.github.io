@@ -1,29 +1,48 @@
-# NOSK-Website
-This is the official website for NOSK - Nepal Open Source Klub. NOSK is a group of like-minded people who work to raise awareness and adoption of 
-FOSS (Free and Open Source Software). We, being at the club, aim to educate and train people of different domains of technology by organizing different 
-events and sessions time and often.
+# Astro Starter Kit: Basics
 
-## Hacktoberfest Participation
+```sh
+npm create astro@latest -- --template basics
+```
 
-This project is also open for **[Hacktoberfest](https://hacktoberfest.com/)** contributions! Please follow the [`CONTRIBUTING.md`](CONTRIBUTING.md) file for more information on how to contribute and be part of Hacktoberfest.
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-As an open source community, we welcome contributions from everyone!
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-# How to Contribute
-1. Fork the project
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-![image](https://user-images.githubusercontent.com/67583667/214760055-293776b6-9139-483f-b0f1-9a38268c2dc5.png)
+## 🚀 Project Structure
 
-2. Update code
-3. Open Pull Request
+Inside of your Astro project, you'll see the following folders and files:
 
-![image](https://user-images.githubusercontent.com/67583667/214760236-4ea090db-f131-487b-8096-5823d24866a8.png)
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
+```
 
-4. Wait for merging that request (optional)
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-`Note: Anyone with interest can contribute`
+## 🧞 Commands
 
-# Contributors
-<a href="https://github.com/noskofficial/noskofficial.github.io/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=noskofficial/noskofficial.github.io" />
-</a>
+All commands are run from the root of the project, from a terminal:
+
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 👀 Want to learn more?
+
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
