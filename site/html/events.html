@@ -1,133 +1,740 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Bootstrap 5:-->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <!--Add custom style sheets below this comment-->
-    <link href="/site/style/styles.css" rel="stylesheet" />
-    <link href="/site/style/events.css" rel="stylesheet" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - NOSK - Nepal Open Source Klub</title>
+    <meta name="description" content="Discover upcoming and past events by Nepal Open Source Klub (NOSK). Join our workshops, seminars, and community meetups to learn about open source technologies.">
+    <meta name="keywords" content="NOSK, Nepal Open Source Klub, Events, Workshops, Seminars, Linux, Programming, FOSS">
+    <meta name="author" content="Nepal Open Source Klub">
 
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico" />
+    <meta property="og:title" content="Events - NOSK - Nepal Open Source Klub">
+    <meta property="og:description" content="Join our upcoming events and workshops on open source technologies, programming, and community building.">
+    <meta property="og:image" content="https://nosk.org.np/site/images/nosk-logo.png">
+    <meta property="og:url" content="https://nosk.org.np/site/html/events.html">
+    <meta property="og:type" content="website">
 
-    <!--Js Requirements for Bootstrap-->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-      crossorigin="anonymous"
-      defer
-    ></script>
-    <script type="module" src="/site/js/event.js" defer></script>
-    <title>NOSK - Events</title>
-  </head>
-  <body>
-    <header>
-      <!-- Navbar Starts Here-->
-      <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-          <!-- Load NOSK Logo-->
-          <div class="d-flex flex-column align-items-center">
-            <a class="navbar-brand" href="/">
-              <img
-                src="/site/images/nosk-logo.png"
-                alt="Logo of Nepal Open Source Klub"
-                width="120"
-                height="120"
-              />
-            </a>
-            <p class="fullform">Nepal Open Source Klub</p>
-          </div>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            tabindex="-1"
-            data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span
-              class="navbar-toggler-icon"
-              data-bs-target="#offcanvasNavbar"
-            ></span>
-          </button>
-          <!--Navbar Item Starts here-->
-          <div class="offcanvas-lg offcanvas-end" id="offcanvasNavbar">
-            <div class="offcanvas-header">
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                data-bs-target="#offcanvasNavbar"
-                aria-label="Close"
-              ></button>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
+
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #208820;
+            --primary-hover: #1a6d1a;
+            --secondary-color: #f0f4f0;
+            --text-color: #333;
+            --background-color: #fff;
+            --dark-mode-bg: #121212;
+            --dark-mode-text: #e0e0e0;
+            --dark-mode-surface: #1e1e1e;
+            --transition-speed: 0.3s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            line-height: 1.7;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --text-color: var(--dark-mode-text);
+            --background-color: var(--dark-mode-bg);
+            --secondary-color: var(--dark-mode-surface);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-highlight {
+            background-color: var(--secondary-color);
+        }
+
+        /* Header & Sticky Navigation */
+        .main-header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color var(--transition-speed);
+        }
+        
+        body.dark-mode .main-header {
+            box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { 
+            color: var(--primary-color); 
+        }
+        
+        .nav-toggle-btn { display: none; }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        /* Events Styles */
+        .events-hero {
+            background-color: var(--secondary-color);
+            padding: 8rem 0 4rem 0;
+            text-align: center;
+        }
+
+        .events-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .events-hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+        }
+
+        /* Events Container */
+        .events-container {
+            display: grid;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .event-card {
+            background: var(--background-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            padding: 2.5rem;
+            transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+        }
+        
+        body.dark-mode .event-card {
+             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+             background: var(--dark-mode-surface);
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .event-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        body.dark-mode .event-meta {
+            color: #aaa;
+        }
+
+        .event-meta span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-speakers {
+            margin-bottom: 1.5rem;
+        }
+
+        .event-speakers strong {
+            color: var(--primary-color);
+        }
+
+        .event-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .event-btn {
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all var(--transition-speed);
+            border: 2px solid var(--primary-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .event-btn.primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .event-btn.primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        .event-btn.secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        .event-btn.secondary:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .event-image {
+            width: 300px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-speed);
+        }
+
+        .event-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .event-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .event-date {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .event-description {
+            color: var(--text-color);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .event-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.7;
+        }
+
+        .event-meta-item i {
+            color: var(--primary-color);
+        }
+
+        .event-status {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .event-status.upcoming {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .event-status.ongoing {
+            background-color: #f3e5f5;
+            color: #7b1fa2;
+        }
+
+        .event-status.completed {
+            background-color: #e8f5e8;
+            color: #388e3c;
+        }
+
+        body.dark-mode .event-status.upcoming {
+            background-color: #1976d2;
+            color: #fff;
+        }
+
+        body.dark-mode .event-status.ongoing {
+            background-color: #7b1fa2;
+            color: #fff;
+        }
+
+        body.dark-mode .event-status.completed {
+            background-color: #388e3c;
+            color: #fff;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 0.8rem 1.5rem;
+            background-color: transparent;
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all var(--transition-speed);
+            text-decoration: none;
+        }
+
+        .filter-tab.active,
+        .filter-tab:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* No Events Message */
+        .no-events {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: var(--text-color);
+            opacity: 0.6;
+        }
+
+        .no-events i {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        /* Pagination */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .pagination button {
+            padding: 0.8rem 1.2rem;
+            border: 1px solid var(--primary-color);
+            background-color: transparent;
+            color: var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+        }
+
+        .pagination button:hover,
+        .pagination button.active {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        /* Pagination */
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            padding: 0 1rem;
+        }
+
+        .pagination {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .pagination button {
+            padding: 0.8rem 1.2rem;
+            border: 2px solid var(--primary-color);
+            background-color: transparent;
+            color: var(--primary-color);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all var(--transition-speed);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-width: 44px;
+            min-height: 44px;
+            justify-content: center;
+            white-space: nowrap;
+            font-size: 1.1rem;
+        }
+
+        .pagination button:hover,
+        .pagination button.active {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .pagination button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .pagination button:disabled:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: none;
+        }
+
+        body.dark-mode .pagination button:disabled:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+        }
+
+        /* Go To Top Button */
+        #goToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        #goToTopBtn:hover { background-color: var(--primary-hover); }
+
+        /* Footer */
+        .main-footer {
+            background: var(--text-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        body.dark-mode .main-footer { background: #000; }
+
+        /* Responsive Styles */
+        @media(max-width: 992px) {
+            .events-hero h1 { font-size: 2.8rem; }
+        }
+
+        @media(max-width: 768px) {
+            h2 { font-size: 2.2rem; }
+            section { padding: 4rem 0; }
+
+            .event-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .event-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .event-actions {
+                justify-content: center;
+            }
+
+            .nav-toggle-btn { 
+                display: block; 
+                background: none; 
+                border: none; 
+                font-size: 1.5rem; 
+                color: var(--text-color); 
+                cursor: pointer; 
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 75px; 
+                left: 0;
+                background-color: var(--background-color);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding-bottom: 1rem;
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 1.2rem 0; width: 100%; text-align: center; }
+            .dark-mode-toggle { margin: 0; }
+
+            .events-hero h1 { font-size: 2.5rem; }
+            .events-hero { padding: 6rem 0 3rem 0; }
+            
+            .pagination {
+                gap: 0.3rem;
+            }
+            
+            .pagination button {
+                padding: 0.6rem 0.8rem;
+                font-size: 0.9rem;
+                min-width: 40px;
+                min-height: 40px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .container { padding: 0 1rem; }
+            
+            .event-card {
+                padding: 1.5rem 1rem;
+            }
+
+            .event-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .event-btn {
+                padding: 0.7rem 1.2rem;
+                font-size: 0.9rem;
+            }
+            
+            .events-hero h1 { font-size: 2rem; }
+            .events-hero { padding: 5rem 0 2rem 0; }
+            
+            .pagination-container {
+                margin-top: 2rem;
+                padding: 0 0.5rem;
+            }
+            
+            .pagination {
+                gap: 0.25rem;
+                justify-content: center;
+            }
+            
+            .pagination button {
+                padding: 0.5rem 0.6rem;
+                font-size: 0.8rem;
+                min-width: 36px;
+                min-height: 36px;
+                border-width: 1px;
+            }
+            
+            .pagination button:not(.active) {
+                background-color: var(--secondary-color);
+                border-color: var(--secondary-color);
+                color: var(--text-color);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="/" class="logo">NOSK</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/site/html/events.html" class="active">Events</a></li>
+                <li><a href="/site/html/about.html">About</a></li>
+                <li><a href="/site/html/gallery.html">Gallery</a></li>
+                <li><a href="/site/html/contact.html">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle-btn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <div class="offcanvas-body">
-              <ul id="nav-list" class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="/">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/site/html/about.html">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/site/html/gallery.html">Gallery</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/site/html/events.html">Events</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/site/html/contact.html">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="https://blog.nosk.org.np/">Blog</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <!--Navbar Item Ends here-->
-        </div>
-      </nav>
-      <!-- Navbar Ends Here-->
+        </nav>
     </header>
-    <div
-      class="container d-flex flex-column align-items-center justify-content-center"
-    >
-    <div id="event-list" class="event-grid "></div>
-    <div id="pagination-container" class="pagination-container"></div>
-     
-  </body>
+
+    <main>
+        <section class="events-hero">
+            <div class="container">
+                <h1>Events & Workshops</h1>
+                <p>Join our community events, workshops, and seminars to learn about open source technologies, programming, and build connections with fellow tech enthusiasts.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div id="event-list" class="events-container">
+                    <!-- Events will be loaded here dynamically -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nepal Open Source Klub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="goToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script type="module" src="/site/js/event.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggleBtn = document.querySelector('.nav-toggle-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggleBtn && navLinks) {
+                navToggleBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+            }
+
+            // Dark Mode
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = darkModeToggle.querySelector('i');
+                    const isDarkMode = document.body.classList.contains('dark-mode');
+                    icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+                    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+                });
+
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+            }
+
+            // Go To Top Button
+            const goToTopBtn = document.getElementById("goToTopBtn");
+            if (goToTopBtn) {
+                window.onscroll = () => {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                        goToTopBtn.style.display = "block";
+                    } else {
+                        goToTopBtn.style.display = "none";
+                    }
+                };
+                goToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
 </html>

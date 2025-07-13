@@ -4,171 +4,213 @@ let date = new Date();
 let today_month = date.getMonth();
 let today_date = date.getDate();
 let today_year = date.getFullYear();
-let curr_hour = date.getHours();
 
-const eventsPerPage = 6;
-let currentPage = 1;
-let totalPages = 1;
 let allEvents = [];
+let currentPage = 1;
+const eventsPerPage = 5;
 
-/* Create a container for pagination controls */
-const paginationContainer = document.createElement("div");
-paginationContainer.classList.add(
-  "pagination-container",
-  "text-center",
-  "fixed-bottom",
-  "mb-2"
-);
-
-/* Previous button */
-const prevButton = document.createElement("button");
-prevButton.innerText = "Previous";
-prevButton.classList.add("btn", "btn-primary", "mx-2");
-prevButton.disabled = true;
-prevButton.addEventListener("click", () => {
-  if (currentPage > 1) {
-    currentPage--;
-    renderEvents();
-    updatePaginationButtons();
+// Load events from JSON file
+async function loadEvents() {
+  console.log('Loading events...');
+  
+  // Try multiple paths
+  const paths = [
+    '../../events.json',
+    '/events.json',
+    './events.json',
+    '../events.json'
+  ];
+  
+  for (const path of paths) {
+    try {
+      console.log(`Trying to fetch from: ${path}`);
+      const response = await fetch(path);
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const events = await response.json();
+      console.log(`Successfully loaded ${events.length} events from ${path}`);
+      allEvents = events;
+      renderEvents();
+      renderPagination();
+      return; // Success, exit function
+    } catch (error) {
+      console.error(`Failed to load from ${path}:`, error);
+    }
   }
-});
+  
+  // If all paths failed
+  console.error('All fetch attempts failed');
+  events_div.innerHTML = '<p style="text-align: center; color: #666; padding: 3rem;">Error loading events. Please check the console for details.</p>';
+}
 
-/* Next button */
-const nextButton = document.createElement("button");
-nextButton.innerText = "Next";
-nextButton.classList.add("btn", "btn-primary", "mx-2");
-nextButton.addEventListener("click", () => {
-  if (currentPage < totalPages) {
-    currentPage++;
-    renderEvents();
-    updatePaginationButtons();
-  }
-});
-
-/* Append pagination controls */
-paginationContainer.appendChild(prevButton);
-paginationContainer.appendChild(nextButton);
-document.body.appendChild(paginationContainer);
-
-/* Fetch event data from the JSON file */
-fetch("/events.json")
-  .then((data) => data.json())
-  .then((data) => {
-    allEvents = data;
-    totalPages = Math.ceil(allEvents.length / eventsPerPage);
-    renderEvents();
-    updatePaginationButtons();
-  });
-
-/* Render events based on the current page */
+// Render events with pagination
 function renderEvents() {
   events_div.innerHTML = "";
-  const eventGrid = document.createElement("div");
-  eventGrid.classList.add("event-grid");
 
-  const start = (currentPage - 1) * eventsPerPage;
-  const end = start + eventsPerPage;
-  const paginatedEvents = allEvents.slice(start, end);
+  // Calculate pagination
+  const startIndex = (currentPage - 1) * eventsPerPage;
+  const endIndex = startIndex + eventsPerPage;
+  const eventsToShow = allEvents.slice(startIndex, endIndex);
 
   // Loop through and display each event
-  paginatedEvents.forEach((elt) => {
-    const container = document.createElement("div");
-    container.classList.add("event-container", "d-flex", "align-items-start");
+  eventsToShow.forEach((elt) => {
+    const eventCard = document.createElement("div");
+    eventCard.classList.add("event-card");
 
-    const details = document.createElement("div");
-    details.classList.add("event-details", "ml-3");
+    // Create event content
+    const eventContent = document.createElement("div");
+    eventContent.classList.add("event-content");
 
-    const title = document.createElement("a");
-    const status = document.createElement("span");
-    const guest = document.createElement("p");
+    // Event title
+    const title = document.createElement("h3");
+    title.innerText = elt.Title;
+
+    // Event meta information
+    const eventMeta = document.createElement("div");
+    eventMeta.classList.add("event-meta");
 
     const start_detail = elt.Date.split("-");
-    const start_time = elt.Time.split(":");
+    const dateSpan = document.createElement("span");
+    dateSpan.innerHTML = `<i class="fas fa-calendar"></i> ${start_detail[0]}/${start_detail[1]}/${start_detail[2]}`;
+
+    const timeSpan = document.createElement("span");
+    timeSpan.innerHTML = `<i class="fas fa-clock"></i> ${elt.Time}`;
+
+    eventMeta.appendChild(dateSpan);
+    eventMeta.appendChild(timeSpan);
+
+    // Event speakers
+    const speakers = document.createElement("div");
+    speakers.classList.add("event-speakers");
+    speakers.innerHTML = `<strong>Speakers:</strong> ${elt.By.join(", ")}`;
+
+    // Event actions
+    const eventActions = document.createElement("div");
+    eventActions.classList.add("event-actions");
 
     // Determine the event status
-    var event_status = "Completed";
-    if (today_year < start_detail[2]) event_status = "Registration Open";
+    var event_status = "completed";
+    if (today_year < start_detail[2]) event_status = "upcoming";
     else if (today_year == start_detail[2] && today_month + 1 < start_detail[1])
-      event_status = "Registration Open";
+      event_status = "upcoming";
     else if (today_year == start_detail[2] && today_month + 1 == start_detail[1] && today_date <= start_detail[0])
-      event_status = "Registration Open";
+      event_status = "upcoming";
 
-    // Apply CSS class based on event status
-    if (event_status === "Completed") {
-      status.classList.add("event-status", "completed"); 
-    } else if (event_status === "Registration Open") {
-      status.classList.add("event-status", "registration-open"); 
-    }
-
-    // If event is not complete, refer to registration for the event
-    // otherwise, refer to the gallery section of the corresponding event
-    if (event_status !== "Completed") {
-      title.href = elt.URL;
-    } else {
-      if (elt.IMGURL) title.href = elt.IMGURL;
-      else title.href = elt.URL;
-    }
-
-    title.innerText = elt.Title;
-    title.classList.add("event-title");
-    status.innerText = event_status;
-    guest.innerText = "By: ";
-    guest.classList.add("event-guest");
-
-    elt.By.forEach((collaborator, index) => {
-      const profileLink = document.createElement("a");
-      profileLink.href = elt.ProfileLink[index] || "#";
-      profileLink.innerText = collaborator;
-      profileLink.target = "_blank";
-      profileLink.classList.add("profile-link");
-
-      guest.appendChild(profileLink);
-
-      if (index < elt.By.length - 1) {
-        guest.appendChild(document.createTextNode(", "));
+    // Create appropriate buttons based on event status
+    if (event_status !== "completed") {
+      if (elt.URL) {
+        const registerBtn = document.createElement("a");
+        registerBtn.href = elt.URL;
+        registerBtn.target = "_blank";
+        registerBtn.classList.add("event-btn", "primary");
+        registerBtn.innerHTML = `<i class="fas fa-user-plus"></i> Register Now`;
+        eventActions.appendChild(registerBtn);
       }
-    });
+    } else {
+      if (elt.IMGURL) {
+        const galleryBtn = document.createElement("a");
+        galleryBtn.href = elt.IMGURL;
+        galleryBtn.classList.add("event-btn", "secondary");
+        galleryBtn.innerHTML = `<i class="fas fa-images"></i> View Gallery`;
+        eventActions.appendChild(galleryBtn);
+      }
+    }
 
-    container.appendChild(title);
-    container.appendChild(status);
-    container.appendChild(guest);
-    events_div.appendChild(container);
+    if (elt.URL && event_status === "completed") {
+      const detailsBtn = document.createElement("a");
+      detailsBtn.href = elt.URL;
+      detailsBtn.target = "_blank";
+      detailsBtn.classList.add("event-btn", "secondary");
+      detailsBtn.innerHTML = `<i class="fas fa-info-circle"></i> Details`;
+      eventActions.appendChild(detailsBtn);
+    }
+
+    // Assemble event content
+    eventContent.appendChild(title);
+    eventContent.appendChild(eventMeta);
+    eventContent.appendChild(speakers);
+    eventContent.appendChild(eventActions);
+
+    // Assemble event card
+    eventCard.appendChild(eventContent);
+
+    events_div.appendChild(eventCard);
   });
-
-  events_div.appendChild(eventGrid);
 }
 
-/* Update pagination buttons */
-function updatePaginationButtons() {
-  // Clear the old page buttons (Previous, Page Numbers, Next)
-  paginationContainer.innerHTML = "";
+// Render pagination controls
+function renderPagination() {
+  const totalPages = Math.ceil(allEvents.length / eventsPerPage);
+  
+  // Remove existing pagination if any
+  let existingPagination = document.querySelector('.pagination-container');
+  if (existingPagination) {
+    existingPagination.remove();
+  }
+  
+  // Don't show pagination if there's only one page or no events
+  if (totalPages <= 1) {
+    return;
+  }
+  
+  const paginationContainer = document.createElement("div");
+  paginationContainer.classList.add("pagination-container");
+  
+  const pagination = document.createElement("div");
+  pagination.classList.add("pagination");
 
-  // Handle Previous button
-  prevButton.disabled = currentPage === 1;
-  paginationContainer.appendChild(prevButton);
-
-  // Create numbered page buttons
-  for (let i = 1; i <= totalPages; i++) {
-    const pageButton = document.createElement("button");
-    pageButton.innerText = i;
-    pageButton.classList.add("btn", "mx-1");
-
-    // Highlight the current page button
-    if (i === currentPage) {
-      pageButton.classList.add("btn-primary");
-    } else {
-      pageButton.classList.add("btn-light");
+  // Previous button
+  const prevBtn = document.createElement("button");
+  prevBtn.innerHTML = `&lt;`;
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      renderEvents();
+      renderPagination();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+  });
+  pagination.appendChild(prevBtn);
 
-    pageButton.addEventListener("click", () => {
+  // Page numbers
+  for (let i = 1; i <= totalPages; i++) {
+    const pageBtn = document.createElement("button");
+    pageBtn.innerText = i;
+    if (i === currentPage) {
+      pageBtn.classList.add("active");
+    }
+    pageBtn.addEventListener('click', () => {
       currentPage = i;
       renderEvents();
-      updatePaginationButtons();
+      renderPagination();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-    paginationContainer.appendChild(pageButton);
+    pagination.appendChild(pageBtn);
   }
 
-  // Handle Next button
-  nextButton.disabled = currentPage === totalPages;
-  paginationContainer.appendChild(nextButton);
+  // Next button
+  const nextBtn = document.createElement("button");
+  nextBtn.innerHTML = `&gt;`;
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      renderEvents();
+      renderPagination();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+  pagination.appendChild(nextBtn);
+
+  paginationContainer.appendChild(pagination);
+  
+  // Add pagination after events
+  events_div.parentNode.appendChild(paginationContainer);
 }
+
+// Load events when page loads
+document.addEventListener('DOMContentLoaded', loadEvents);

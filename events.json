@@ -1,5 +1,24 @@
 [   
      {
+      "id": "26",
+      "Title": "Software Freedom Day 2025",
+      "By":["NOSK Contributors"],
+      "Date": "20-09-2025",
+      "Time": "09:00",
+      "URL": "https://sfd.nosk.org.np",
+      "ProfileLink":["https://sfd.nosk.org.np"] 
+    }, 
+    {
+      "id": "25",
+      "Title": "Git and Github Workshop",
+      "By":["Rishav Chapagain","Anish Kumar Neupane"],
+      "Date": "21-02-2025",
+      "Time": "14:00",
+      "URL": "https://forms.gle/M2ZthGJmqJsxcCrq6",
+      "ProfileLink":["https://forms.gle/M2ZthGJmqJsxcCrq6"] 
+    },
+    
+     {
       "id": "24",
       "Title": "Software Freedom Day 2024",
       "By":["NOSK Contributors"],
@@ -24,7 +43,6 @@
       "Date":"01-06-2024",
       "Time":"10:30",
       "URL":"https://forms.gle/vMyq8eLNYfr48jpA7",
-      "IMGURL":"/site/html/gallery.html#linux-workshop-2024",
       "ProfileLink":["","",""]
 
     },

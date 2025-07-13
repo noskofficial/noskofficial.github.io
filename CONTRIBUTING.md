@@ -56,7 +56,7 @@ Welcome to the NOSK Official Website repository! We appreciate your interest in 
 ## Stay Connected 💬
 
 Join our community on:
-- [Discord](https://discord.gg/ryUf3jjFJ6)
+- [Discord](https://discord.gg/P5Y6nbHVPU)
 - [Telegram](https://t.me/noskgroup)
 
 ## Resources

@@ -3,109 +3,407 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-    <!-- OG tags -->
-    <meta property="og:title" content="About the NOSK - Nepal Open Source Klub" />
-    <meta property="og:type" content="website" />
-    <meta property="og:description" content="NOSK - Nepal Open Source Klub is a group of like-minded people who work to raise awareness and adoption of FOSS( Free and Open Source Software) in Nepal." />
+    <title>Contact - NOSK - Nepal Open Source Klub</title>
+    <meta name="description" content="Get in touch with Nepal Open Source Klub (NOSK). Send us a message and we'll get back to you soon!">
+    <meta name="keywords" content="NOSK, Nepal Open Source Klub, Contact, Message, Support, Email">
+    <meta name="author" content="Nepal Open Source Klub">
 
-    <!-- Bootstrap 5:-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- Font Awesome icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Google Font -->
+    <meta property="og:title" content="Contact NOSK - Nepal Open Source Klub">
+    <meta property="og:description" content="Get in touch with us. Send us a message and we'll get back to you soon!">
+    <meta property="og:image" content="https://nosk.org.np/site/images/nosk-logo.png">
+    <meta property="og:url" content="https://nosk.org.np/site/html/contact.html">
+    <meta property="og:type" content="website">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Fira+Sans&display=swap" rel="stylesheet">
-    <!--Add custom style sheets below this comment-->
-    <link href="/site/style/styles.css" rel="stylesheet">
-    <link href="/site/style/contact.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-    <!-- favicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
 
-    <!--Js Requirements for Bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous" defer></script>
-    
-    <title>NOSK - Nepal Open Source Klub</title>
-</head>
-<body>
-    <header class="container d-flex flex-column">
-        <!-- Navbar Starts Here-->
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <div class="container">
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #208820;
+            --primary-hover: #1a6d1a;
+            --secondary-color: #f0f4f0;
+            --text-color: #333;
+            --background-color: #fff;
+            --dark-mode-bg: #121212;
+            --dark-mode-text: #e0e0e0;
+            --dark-mode-surface: #1e1e1e;
+            --transition-speed: 0.3s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            line-height: 1.7;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --text-color: var(--dark-mode-text);
+            --background-color: var(--dark-mode-bg);
+            --secondary-color: var(--dark-mode-surface);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-highlight {
+            background-color: var(--secondary-color);
+        }
+
+        /* Header & Sticky Navigation */
+        .main-header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color var(--transition-speed);
+        }
+        
+        body.dark-mode .main-header {
+            box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { 
+            color: var(--primary-color); 
+        }
+        
+        .nav-toggle-btn { display: none; }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        /* Contact Container */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+        }
+        
+        .contact-info h3 { 
+            font-size: 2rem; 
+        }
+
+        .contact-form .form-group { 
+            margin-bottom: 1.5rem; 
+        }
+        
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: var(--secondary-color);
+            color: var(--text-color);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+        }
+        
+        .contact-form input:focus, .contact-form textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(32, 136, 32, 0.2);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            border: 2px solid var(--primary-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            width: 100%;
+            border: none;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary-hover);
+            color: #fff;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            transition: color var(--transition-speed), transform var(--transition-speed);
+            display: inline-block;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
+        /* Go To Top Button */
+        #goToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        #goToTopBtn:hover { background-color: var(--primary-hover); }
+
+        /* Footer */
+        .main-footer {
+            background: var(--text-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        body.dark-mode .main-footer { background: #000; }
+
+        /* Responsive Styles */
+        @media(max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        @media(max-width: 768px) {
+            h2 { font-size: 2.2rem; }
+            section { padding: 4rem 0; }
+
+            .nav-toggle-btn { 
+                display: block; 
+                background: none; 
+                border: none; 
+                font-size: 1.5rem; 
+                color: var(--text-color); 
+                cursor: pointer; 
+            }
             
-              <!-- Load NOSK Logo-->
-              <div class="d-flex flex-column align-items-center">
-                <a class="navbar-brand" href="/">
-                  <img src="/site/images/nosk-logo.png" alt="Logo of Nepal Open Source Klub" width="120" height="120">
-                </a>
-                <p class="fullform">Nepal Open Source Klub</p>
-              </div>
-              
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" tabindex="-1" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon" data-bs-target="#offcanvasNavbar"></span>
-            </button>
-            <!--Navbar Item Starts here-->
-            <div class="offcanvas-lg offcanvas-end" id="offcanvasNavbar">
-              <div class="offcanvas-header">
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" data-bs-target="#offcanvasNavbar" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul id = "nav-list" class="navbar-nav">
-                 <li class="nav-item">
-                   <a class="nav-link" href="/">Home</a>
-                 </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="/site/html/about.html">About</a>
-                 </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="/site/html/gallery.html">Gallery</a>
-                 </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="/site/html/events.html">Events</a>
-                 </li>
-                 <li class="nav-item active">
-                  <a class="nav-link" href="/site/html/contact.html">Contact</a>
-                 </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="https://blog.nosk.org.np/">Blog</a>
-                </li>
-                </ul>
-              </div>
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 75px; 
+                left: 0;
+                background-color: var(--background-color);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding-bottom: 1rem;
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 1.2rem 0; width: 100%; text-align: center; }
+            .dark-mode-toggle { margin: 0; }
+
+            .contact-container { gap: 2rem; }
+            .social-links { justify-content: center; }
+        }
+    </style>
+</head>
+   <header class="main-header">
+        <nav class="main-nav container">
+            <a href="/" class="logo">NOSK</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/site/html/events.html">Events</a></li>
+                <li><a href="/site/html/about.html">About</a></li>
+                <li><a href="/site/html/gallery.html">Gallery</a></li>
+                <li><a href="/site/html/contact.html" class="active">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle-btn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
-            <!--Navbar Item Ends here-->
-          </div>
         </nav>
-          <!-- Navbar Ends Here-->
     </header>
-    <!-- Back to top button -->
-    <button type="button" class="btn btn-success btn-floating btn-lg" id="btn-back-to-top">
-      <i class="fa fa-arrow-up"></i>
-    </button>
-    <!-- Main Body Starts Here-->
+
+    <main>
+        <section class="section-highlight">
+            <div class="container">
+                
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Have a question or want to collaborate?</h3>
+                        <p>We'd love to hear from you! Send us a message and we'll get back to you as soon as possible. You can also reach out to us via email at <a href="mailto:nosk@ncit.edu.np" style="color: var(--primary-color); font-weight: 600;">nosk@ncit.edu.np</a></p>
+                        
+                        <p>Feel free to connect with us on social media for the latest updates and community discussions!</p>
+                        
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/nosklub/" aria-label="Our Facebook Page" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/officialnosk/" aria-label="Our Instagram Profile" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/officialnosk/" aria-label="Our LinkedIn Profile" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://t.me/noskgroup/30927" aria-label="Our Telegram Channel" target="_blank"><i class="fab fa-telegram"></i></a>
+                            <a href="https://discord.gg/P5Y6nbHVPU" aria-label="Our Discord Server" target="_blank"><i class="fab fa-discord"></i></a>
+                            <a href="https://github.com/noskofficial" aria-label="Our GitHub Organization" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <form class="contact-form" action="https://formspree.io/f/xkgzwrpv" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full Name" required aria-label="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email Address" required aria-label="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name="subject" placeholder="Subject" required aria-label="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="6" placeholder="Message" required aria-label="Message"></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nepal Open Source Klub. All Rights Reserved.</p>
+        </div>
+    </footer>
     
-    <!--Section: Contact -->
-<section class="mb-4 ">
-
-    <!--Section heading-->
-    <h2 class="h1-responsive font-weight-bold text-center my-4">Contact us</h2>
-    <!--Section description-->
-    <p class="text-center w-responsive mx-auto mb-5">
-    Do you have any questions? 
-    You can reach out to us via mail at <a href="mailto:nosk@ncit.edu.np">nosk@ncit.edu.np</a>
-    </p>
 
 
-</section>
-<!--Section: Contact-->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggleBtn = document.querySelector('.nav-toggle-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggleBtn && navLinks) {
+                navToggleBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+            }
 
-    <!-- including script.js for back to top button -->
-    <script src="../js/script.js"></script>
+            // Dark Mode
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = darkModeToggle.querySelector('i');
+                    const isDarkMode = document.body.classList.contains('dark-mode');
+                    icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+                    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+                });
+
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+            }
+
+            // Go To Top Button
+            const goToTopBtn = document.getElementById("goToTopBtn");
+            if (goToTopBtn) {
+                window.onscroll = () => {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                        goToTopBtn.style.display = "block";
+                    } else {
+                        goToTopBtn.style.display = "none";
+                    }
+                };
+                goToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
 </body>
 </html>

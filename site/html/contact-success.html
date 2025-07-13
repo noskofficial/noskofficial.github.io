@@ -2,14 +2,318 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Info Submitted -NOSK</title>
+    <title>Contact Success - NOSK - Nepal Open Source Klub</title>
+    <meta name="description" content="Your message has been successfully sent to Nepal Open Source Klub (NOSK). We'll get back to you soon!">
+    <meta name="keywords" content="NOSK, Nepal Open Source Klub, Contact Success, Message Sent">
+    <meta name="author" content="Nepal Open Source Klub">
+
+    <meta property="og:title" content="Message Sent - NOSK - Nepal Open Source Klub">
+    <meta property="og:description" content="Your message has been successfully sent to NOSK. We'll contact you soon!">
+    <meta property="og:image" content="https://nosk.org.np/site/images/nosk-logo.png">
+    <meta property="og:url" content="https://nosk.org.np">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
+
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #208820;
+            --primary-hover: #1a6d1a;
+            --secondary-color: #f0f4f0;
+            --text-color: #333;
+            --background-color: #fff;
+            --dark-mode-bg: #121212;
+            --dark-mode-text: #e0e0e0;
+            --dark-mode-surface: #1e1e1e;
+            --transition-speed: 0.3s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            line-height: 1.7;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --text-color: var(--dark-mode-text);
+            --background-color: var(--dark-mode-bg);
+            --secondary-color: var(--dark-mode-surface);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Header & Sticky Navigation */
+        .main-header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color var(--transition-speed);
+        }
+        
+        body.dark-mode .main-header {
+            box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-links a:hover { color: var(--primary-color); }
+        
+        .nav-toggle-btn { display: none; }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 2rem;
+        }
+
+        .success-container {
+            text-align: center;
+            max-width: 600px;
+            background: var(--secondary-color);
+            padding: 4rem 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        body.dark-mode .success-container {
+            background: var(--dark-mode-surface);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .success-icon {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 2rem;
+        }
+
+        .success-container h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .success-container p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            border: 2px solid var(--primary-color);
+            font-size: 1.1rem;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            background-color: var(--primary-hover);
+            color: #fff;
+        }
+
+        /* Footer */
+        .main-footer {
+            background: var(--text-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: auto;
+        }
+        
+        body.dark-mode .main-footer { 
+            background: #000; 
+        }
+
+        /* Responsive Styles */
+        @media(max-width: 768px) {
+            .nav-toggle-btn { 
+                display: block; 
+                background: none; 
+                border: none; 
+                font-size: 1.5rem; 
+                color: var(--text-color); 
+                cursor: pointer; 
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 75px; 
+                left: 0;
+                background-color: var(--background-color);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding-bottom: 1rem;
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 1.2rem 0; width: 100%; text-align: center; }
+            .dark-mode-toggle { margin: 0; }
+
+            .success-container {
+                padding: 3rem 2rem;
+            }
+
+            .success-container h1 {
+                font-size: 2rem;
+            }
+
+            .success-container p {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <h1 style="color: green;">The information has been successfully sent to NOSK team.</h1>
-        <p>Our team will contact back you soon. Be connected with us. <a href="https://nosk.org.np">Get back to home page.</a></p>
-    </center>
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="/" class="logo">NOSK</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/site/html/events.html">Events</a></li>
+                <li><a href="/site/html/about.html">About</a></li>
+                <li><a href="/site/html/gallery.html">Gallery</a></li>
+                <li><a href="/site/html/contact.html">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle-btn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="success-container">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h1>Message Sent Successfully!</h1>
+            <p>Thank you for reaching out to the NOSK team. Your information has been successfully received and we will contact you back soon. Stay connected with us!</p>
+            <a href="/" class="cta-button">Back to Home</a>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nepal Open Source Klub. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggleBtn = document.querySelector('.nav-toggle-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggleBtn && navLinks) {
+                navToggleBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+            }
+
+            // Dark Mode
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = darkModeToggle.querySelector('i');
+                    const isDarkMode = document.body.classList.contains('dark-mode');
+                    icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+                    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+                });
+
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
