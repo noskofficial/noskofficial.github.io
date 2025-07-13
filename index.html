@@ -520,13 +520,95 @@
 
         /* About Us */
         .about-us-content {
-            display: flex;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
             align-items: center;
-            gap: 4rem;
         }
-        .about-text { flex: 1; }
-        .about-image { flex: 1; display: flex; justify-content: center; align-items: center; }
-        .about-image img { max-width: 100%; width: 400px; border-radius: 15px; }
+        
+        .about-text { 
+            order: 2;
+        }
+        
+        .about-image { 
+            order: 1;
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+        }
+        
+        .about-image img { 
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .about-image img:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+        
+        body.dark-mode .about-image img {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+        
+        body.dark-mode .about-image img:hover {
+            box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+        }
+        
+        .about-text h2 {
+            text-align: left;
+            margin-bottom: 2rem;
+            font-size: 3rem;
+        }
+        
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.8rem;
+            color: var(--text-color);
+        }
+        
+        .about-text p:first-of-type {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+        
+        .about-highlight {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+            pointer-events: none;
+        }
+        
+        .about-highlight h3 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .about-highlight p {
+            color: rgba(255,255,255,0.95);
+            margin-bottom: 0;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
 
         /* Event Gallery - Enhanced Carousel */
         .gallery-carousel {
@@ -698,7 +780,18 @@
                 grid-template-columns: 1fr;
             }
             .about-us-content {
-                flex-direction: column-reverse;
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .about-text {
+                order: 1;
+            }
+            .about-image {
+                order: 2;
+            }
+            .about-text h2 {
+                text-align: center;
+                font-size: 2.5rem;
             }
         }
 
@@ -817,14 +910,15 @@
         <section id="about" class="section-highlight">
             <div class="container">
                 <div class="about-us-content">
+                    <div class="about-image">
+                         <img src="./site/images/about.png" alt="NOSK Community - Collaborative workshop session">
+                    </div>
                     <div class="about-text">
                         <h2>About The Klub</h2>
-                        <p><strong>NOSK - Nepal Open Source Klub</strong> is a group of like-minded people who work to raise awareness and adoption of FOSS (Free and Open Source Software) in Nepal. We at the club aim to educate and train people of different domains of technology by organizing different events and sessions regularly.</p>
-                        <p>NOSK was founded by Nitesh Rijal, a great admirer and promoter of FOSS, on 28th February 2008, formerly as the NCIT Open Source Klub.</p>
-                        <p>NOSK is open to everyone who wants to be a part of it. Anyone can contribute and educate people about technology and any technical topic that supports FOSS through NOSK.</p>
-                    </div>
-                    <div class="about-image">
-                         <img src="./site/images/about.png" alt="A collaborative workshop session">
+                        <p><strong>NOSK - Nepal Open Source Klub</strong> is a vibrant community of like-minded individuals dedicated to raising awareness and adoption of Free and Open Source Software (FOSS) in Nepal. We believe in the power of open collaboration and knowledge sharing.</p>
+                        <p>Our mission is to educate and train people across different domains of technology by organizing workshops, training sessions, and community events that make FOSS accessible to everyone.</p>
+                        <p>Founded by Nitesh Rijal on February 28th, 2008, NOSK began as the NCIT Open Source Klub and has since grown into Nepal's premier FOSS community, fostering innovation and collaboration.</p>
+                     
                     </div>
                 </div>
             </div>
@@ -837,7 +931,7 @@
                 <div class="gallery-carousel">
                     <div class="carousel-track-container">
                         <div class="carousel-track">
-                            <div class="carousel-slide"><img src="./site/images/gallery/CH_programming/photo1668600527.jpeg" alt="Programming workshop session with participants learning coding"></div>
+                            <div class="carousel-slide"><img src="./site/images/gallery/Git_Github/sikairako.png" alt="Programming workshop session with participants learning coding"></div>
                             <div class="carousel-slide"><img src="./site/images/gallery/IntractiveSessionWithSeniors/photo1684659913.jpeg" alt="Interactive session with senior developers and students"></div>
                             <div class="carousel-slide"><img src="./site/images/gallery/ProjExh2023/photo1690643803.jpeg" alt="Project exhibition 2023 - showcasing innovative projects"></div>
                             <div class="carousel-slide"><img src="./site/images/gallery/WebDevTraining/Day1/photo1687697122.jpeg" alt="Web development training session - hands-on learning"></div>
@@ -858,23 +952,27 @@
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
                         <p>"Before joining NOSK, I was just a student curious about Linux. Now, I'm contributing to open-source projects I use every day. The mentorship and support here are unparalleled."</p>
-                        <p class="author">- Anup K.C.</p>
+                        <p class="author">- Bibek Dhakal</p>
                     </div>
                     <div class="testimonial-card">
                         <p>"I found my first internship through a connection I made at a NOSK meetup. It's more than just a tech club; it’s a career launchpad for students in Nepal."</p>
-                        <p class="author">- Sunita Sharma</p>
+                        <p class="author">- Anish Kumar Neupane</p>
                     </div>
                     <div class="testimonial-card">
                         <p>"The hands-on workshops are fantastic. I learned Git, Docker, and so much more in a friendly, no-pressure environment. It's the best place to learn by doing."</p>
-                        <p class="author">- Bishal Rai</p>
+                        <p class="author">- Nitesh Rijal</p>
                     </div>
                     <div class="testimonial-card">
                         <p>"As a designer, I wasn't sure if an 'open-source club' was for me. I was wrong! I've collaborated on amazing projects and learned how design and FOSS intersect."</p>
-                        <p class="author">- Priya Gurung</p>
+                        <p class="author">- Rishav Chapagain</p>
                     </div>
                      <div class="testimonial-card">
                         <p>"NOSK is the heart of the FOSS community in Kathmandu Valley. The energy is contagious, and the people are incredibly welcoming. It truly feels like a family."</p>
-                        <p class="author">- Rajiv Adhikari</p>
+                        <p class="author">- Satya Raj Awasthi</p>
+                    </div>
+                     <div class="testimonial-card">
+                        <p>"NOSK le garda keta keti le padnai chode"</p>
+                        <p class="author">- Bhusan Thapa</p>
                     </div>
                 </div>
             </div>
