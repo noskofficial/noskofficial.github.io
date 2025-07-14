@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - NOSK - Nepal Open Source Klub</title>
+    <meta name="description" content="Learn about Nepal Open Source Klub (NOSK), a community dedicated to raising awareness and adoption of Free and Open Source Software (FOSS) in Nepal.">
+    <meta name="keywords" content="NOSK, Nepal Open Source Klub, About, FOSS, Open Source, Nepal, Community, History">
+    <meta name="author" content="Nepal Open Source Klub">
+
+    <meta property="og:title" content="About NOSK - Nepal Open Source Klub">
+    <meta property="og:description" content="Learn about our mission to promote Free and Open Source Software in Nepal through education, workshops, and community building.">
+    <meta property="og:image" content="https://nosk.org.np/site/images/nosk-logo.png">
+    <meta property="og:url" content="https://nosk.org.np/site/html/about.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
+
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #208820;
+            --primary-hover: #1a6d1a;
+            --secondary-color: #f0f4f0;
+            --text-color: #333;
+            --background-color: #fff;
+            --dark-mode-bg: #121212;
+            --dark-mode-text: #e0e0e0;
+            --dark-mode-surface: #1e1e1e;
+            --transition-speed: 0.3s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            line-height: 1.7;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --text-color: var(--dark-mode-text);
+            --background-color: var(--dark-mode-bg);
+            --secondary-color: var(--dark-mode-surface);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-highlight {
+            background-color: var(--secondary-color);
+        }
+
+        /* Header & Sticky Navigation */
+        .main-header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color var(--transition-speed);
+        }
+        
+        body.dark-mode .main-header {
+            box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { 
+            color: var(--primary-color); 
+        }
+        
+        .nav-toggle-btn { display: none; }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        /* About Hero Section */
+        .about-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 70vh;
+            background-color: var(--background-color);
+            padding: 4rem 2rem;
+        }
+
+        .about-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .about-text h1 {
+            font-size: 3.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .about-logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .about-logo {
+            width: 300px;
+            height: 300px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        /* Content Sections */
+        .content-section {
+            background: var(--background-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        body.dark-mode .content-section {
+             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+             background: var(--dark-mode-surface);
+        }
+
+        .content-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .content-section ul li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .content-section ul li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary-color);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+            font-size: 1rem;
+        }
+
+        .social-link:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-3px);
+            color: #fff;
+        }
+
+        .social-link i {
+            font-size: 1.2rem;
+        }
+
+        /* Go To Top Button */
+        #goToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        #goToTopBtn:hover { background-color: var(--primary-hover); }
+
+        /* Footer */
+        .main-footer {
+            background: var(--text-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        body.dark-mode .main-footer { background: #000; }
+
+        /* Responsive Styles */
+        @media(max-width: 992px) {
+            .about-hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .about-logo-container {
+                order: -1;
+            }
+            
+            .about-logo {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media(max-width: 768px) {
+            h2 { font-size: 2.2rem; }
+            section { padding: 4rem 0; }
+
+            .nav-toggle-btn { 
+                display: block; 
+                background: none; 
+                border: none; 
+                font-size: 1.5rem; 
+                color: var(--text-color); 
+                cursor: pointer; 
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 75px; 
+                left: 0;
+                background-color: var(--background-color);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding-bottom: 1rem;
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 1.2rem 0; width: 100%; text-align: center; }
+            .dark-mode-toggle { margin: 0; }
+
+            .about-text h1 { font-size: 2.5rem; }
+            .about-logo { width: 200px; height: 200px; }
+            .content-section { padding: 2rem; }
+            .social-links { gap: 1rem; }
+        }
+
+        @media(max-width: 480px) {
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .social-link {
+                width: 200px;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="/" class="logo">NOSK</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/site/html/events.html">Events</a></li>
+                <li><a href="/site/html/about.html" class="active">About</a></li>
+                <li><a href="/site/html/gallery.html">Gallery</a></li>
+                <li><a href="/site/html/contact.html">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle-btn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-hero">
+            <div class="about-hero-content">
+                <div class="about-text">
+                    <h1>About NOSK</h1>
+                    <p><strong>NOSK - Nepal Open Source Klub</strong> is a group of like-minded people who work to raise awareness and adoption of <strong>FOSS</strong> (Free and Open Source Software) in Nepal.</p>
+                    <p>We at the club aim to educate and train people of different domains of technology by organizing different events and sessions regularly.</p>
+                    <p>NOSK was founded by Nitesh Rijal, a great admirer and promoter of FOSS, on 28th February 2008, formerly as the NCIT Open Source Klub.</p>
+                </div>
+                <div class="about-logo-container">
+                    <img class="about-logo" src="/site/images/nosk-logo.png" alt="NOSK - Nepal Open Source Klub Logo">
+                </div>
+            </div>
+        </section>
+
+        <section class="section-highlight">
+            <div class="container">
+                <div class="content-section">
+                    <h3>Our Objectives</h3>
+                    <ul>
+                        <li>Promote Open Source Culture</li>
+                        <li>Help the people to adopt FOSS</li>
+                        <li>Provide Workshop on various Open Source Tool and Technology</li>
+                        <li>Build a strong community of FOSS enthusiasts</li>
+                        <li>Foster innovation through collaborative development</li>
+                    </ul>
+                </div>
+
+                <div class="content-section">
+                    <h3>Open For All</h3>
+                    <p><strong>NOSK</strong> is open to everyone who wants to be a part of it. Anyone can contribute and educate people about technology and any technical stuff which supports FOSS through the NOSK.</p>
+                    <p>Being an Open Source Club, we strongly support and promote Free and Open Source. Anyone with interest can be a part of our open source software development which can be done through <a href="https://github.com/noskofficial" style="color: var(--primary-color); font-weight: 600;">GitHub</a>.</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>Promotion of Open Source and Free Software</h3>
+                    <p>Being an Open Source club, we want everyone to learn about Open Source, know its benefit and help them learn using Free and Open Source software. To achieve this, we organize various talks and workshops frequently.</p>
+                    
+                    <p><strong>Free Software</strong> comes from free software movement started in 1983 by computer scientist <strong>Richard M Stallman</strong>, when he launched a project called <strong>GNU</strong> which stands for GNU is Not Unix, to provide a replacement for the <strong>UNIX</strong> operating system - a replacement that would respect the freedoms of those using it. More precisely, free software means users of a program have the <a href="https://www.gnu.org/philosophy/free-sw.html#four-freedoms" style="color: var(--primary-color); font-weight: 600;">four essential freedoms</a>.</p>
+
+                    <p><strong>Open Source</strong> is a term that originally referred to open source software (OSS). Open source software is code that is designed to be publicly accessible—anyone can see, modify, and distribute the code as they see fit. Also it doesn't just mean access to source code. The distribution terms of open-source software must comply with the <a href="https://opensource.org/osd" style="color: var(--primary-color); font-weight: 600;">given ten criteria</a>.</p>
+
+                    <p>The main difference between free and open source is that free software is a social movement but the open source is a development pattern.</p>
+                </div>
+
+                <div class="content-section">
+                    <h3>Find Us Here</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/noskgroup/30927" target="_blank" class="social-link" aria-label="Telegram">
+                            <i class="fab fa-telegram"></i> Telegram
+                        </a>
+                        <a href="https://www.facebook.com/nosklub/" target="_blank" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/officialnosk/" target="_blank" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.linkedin.com/company/officialnosk/" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://github.com/noskofficial" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://discord.gg/P5Y6nbHVPU" target="_blank" class="social-link" aria-label="Discord">
+                            <i class="fab fa-discord"></i> Discord
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nepal Open Source Klub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="goToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggleBtn = document.querySelector('.nav-toggle-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggleBtn && navLinks) {
+                navToggleBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+            }
+
+            // Dark Mode
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = darkModeToggle.querySelector('i');
+                    const isDarkMode = document.body.classList.contains('dark-mode');
+                    icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+                    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+                });
+
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+            }
+
+            // Go To Top Button
+            const goToTopBtn = document.getElementById("goToTopBtn");
+            if (goToTopBtn) {
+                window.onscroll = () => {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                        goToTopBtn.style.display = "block";
+                    } else {
+                        goToTopBtn.style.display = "none";
+                    }
+                };
+                goToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

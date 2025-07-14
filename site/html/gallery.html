@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - NOSK - Nepal Open Source Klub</title>
+    <meta name="description" content="Explore our photo gallery showcasing NOSK events, workshops, and community activities. See moments from our Linux workshops, programming sessions, and more!">
+    <meta name="keywords" content="NOSK, Nepal Open Source Klub, Gallery, Photos, Events, Workshops, Linux, Programming">
+    <meta name="author" content="Nepal Open Source Klub">
+
+    <meta property="og:title" content="Gallery - NOSK - Nepal Open Source Klub">
+    <meta property="og:description" content="Explore photos from our workshops, events, and community activities!">
+    <meta property="og:image" content="https://nosk.org.np/site/images/nosk-logo.png">
+    <meta property="og:url" content="https://nosk.org.np/site/html/gallery.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="icon" type="image/x-icon" href="/site/images/favicon.ico">
+
+    <style>
+        /* CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Variables */
+        :root {
+            --primary-color: #208820;
+            --primary-hover: #1a6d1a;
+            --secondary-color: #f0f4f0;
+            --text-color: #333;
+            --background-color: #fff;
+            --dark-mode-bg: #121212;
+            --dark-mode-text: #e0e0e0;
+            --dark-mode-surface: #1e1e1e;
+            --transition-speed: 0.3s;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            transition: background-color var(--transition-speed), color var(--transition-speed);
+            line-height: 1.7;
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            --text-color: var(--dark-mode-text);
+            --background-color: var(--dark-mode-bg);
+            --secondary-color: var(--dark-mode-surface);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 2rem;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-highlight {
+            background-color: var(--secondary-color);
+        }
+
+        /* Header & Sticky Navigation */
+        .main-header {
+            background-color: var(--background-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color var(--transition-speed);
+        }
+        
+        body.dark-mode .main-header {
+            box-shadow: 0 2px 10px rgba(255,255,255,0.05);
+        }
+
+        .main-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color var(--transition-speed);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active { 
+            color: var(--primary-color); 
+        }
+        
+        .nav-toggle-btn { display: none; }
+
+        .dark-mode-toggle {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            font-size: 1.2rem;
+            margin-left: 1.5rem;
+        }
+
+        /* Gallery Styles */
+        .gallery-section {
+            background: var(--background-color);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+            padding: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        body.dark-mode .gallery-section {
+             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+             background: var(--dark-mode-surface);
+        }
+
+        .gallery-section h3 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .image-item {
+            position: relative;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            height: 225px;
+        }
+
+        .image-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: 225px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+            border-radius: 12px;
+        }
+
+        .image-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Legacy Gallery Sections */
+        .sec-container {
+            padding: 4rem 0;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .heading h1 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .img-col {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .img-col img {
+            width: 100%;
+            height: 225px;
+            object-fit: cover;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .img-col img:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Modal Styles */
+        #myModal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            background: none;
+            border: none;
+            cursor: pointer;
+            z-index: 2001;
+            transition: color 0.3s ease;
+        }
+
+        #close-btn:hover {
+            color: var(--primary-color);
+        }
+
+        /* Go To Top Button */
+        #goToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+        #goToTopBtn:hover { background-color: var(--primary-hover); }
+
+        /* Footer */
+        .main-footer {
+            background: var(--text-color);
+            color: var(--secondary-color);
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+        body.dark-mode .main-footer { background: #000; }
+
+        /* Responsive Styles */
+        @media(max-width: 768px) {
+            h2 { font-size: 2.2rem; }
+            section { padding: 4rem 0; }
+
+            .nav-toggle-btn { 
+                display: block; 
+                background: none; 
+                border: none; 
+                font-size: 1.5rem; 
+                color: var(--text-color); 
+                cursor: pointer; 
+            }
+            
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 75px; 
+                left: 0;
+                background-color: var(--background-color);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding-bottom: 1rem;
+            }
+            
+            .nav-links.active { display: flex; }
+            .nav-links li { margin: 1.2rem 0; width: 100%; text-align: center; }
+            .dark-mode-toggle { margin: 0; }
+
+            .image-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 1rem;
+            }
+
+            .gallery-section {
+                padding: 2rem;
+            }
+
+            /* Legacy gallery responsive */
+            .box {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                padding: 0 1rem;
+            }
+
+            .heading h1 {
+                font-size: 1.8rem;
+            }
+
+            .img-col img {
+                height: 200px;
+            }
+
+            #close-btn {
+                top: 10px;
+                right: 20px;
+                font-size: 30px;
+            }
+        }
+
+        @media(max-width: 480px) {
+            .box {
+                padding: 0 0.5rem;
+            }
+
+            .img-col img {
+                height: 180px;
+            }
+
+            .heading h1 {
+                font-size: 1.6rem;
+            }
+        }
+    </style>
+</head>
+
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="/" class="logo">NOSK</a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/site/html/events.html">Events</a></li>
+                <li><a href="/site/html/about.html">About</a></li>
+                <li><a href="/site/html/gallery.html" class="active">Gallery</a></li>
+                <li><a href="/site/html/contact.html">Contact</a></li>
+            </ul>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="nav-toggle-btn" aria-label="Toggle Navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Full screen modal -->
+        <div id="myModal">
+            <button type="button" id="close-btn" aria-label="Close">×</button>
+            <div class="img-container">
+                <img class="modal-content" id="modal-img">
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <h2>Event Gallery</h2>
+                <p style="text-align: center; max-width: 600px; margin: -3rem auto 3rem auto;">A glimpse into our vibrant community events, workshops, and meetups through the years.</p>
+
+                 <div class="gallery-section" id="git-github">
+                    <h3>Github Workshop for Beginners</h3>
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/Git_Github/1750084946572.jpg" alt="Anish Tutoring">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/Git_Github/1750084946740.jpg" alt="Rishav Teaching">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/Git_Github/501749374_1301263925341800_305214165642736784_n.jpg" alt="Anish Teaching">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/Git_Github/ca.jpg" alt="All Smiles, All Fun">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/Git_Github/sikairako.png" alt="Anish and Rishav Teaching">
+                        </div>
+                  
+                    </div>
+                </div>
+
+
+                <div class="gallery-section" id="linux-workshop-2024">
+                    <h3>Linux Workshop for Beginners</h3>
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/abhilekh_talking.jpg" alt="Someone Talking about Linux">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/abhilekh_giving_a_presentation.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/riya_mentoring.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/abhilekh_mentoring.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/bishal_talking.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/bishal_explaining.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/aishu_mentoring.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/aishu_with_a_smile.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/linux-workshop/students_enjoying_linux.jpg" alt="Mentoring during Linux Workshop">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-section" id="ncit-project-exhibition-2023">
+                    <h3>Project Exhibition and Career Fair at NCIT</h3>
+                    <div class="image-grid">
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690633891 (1).jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690633891.jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690633897.jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690643802.jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690643803.jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690689129.jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690689129 (1).jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                        <div class="image-item">
+                            <img class="view-image" loading="lazy" src="/site/images/gallery/ProjExh2023/photo1690643826.jpeg" alt="Project exhibition at NCIT">
+                        </div>
+                    </div>
+                </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-container" id="WebDevTrainingDay5">
+      <div class="heading">
+        <h1>Web Development Training - Day 5</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (1).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (2).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166.jpeg" alt="NOSK web dev">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (6).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (7).jpeg" alt="NOSK web dev">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (3).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (4).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day5/photo1690025166 (5).jpeg" alt="NOSK web dev">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec-container" id="WebDevTrainingDay4">
+      <div class="heading">
+        <h1>Web Development Training - Day 4</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/IMG_0988.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/IMG_0977.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/359409283_758435249624673_6144917658572519585_n.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/359440907_758435236291341_1898590183864492093_n.jpg" alt="NOSK web dev">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/359842512_758435242958007_6523640654658330573_n.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/359842512_758435246291340_7812088709800922253_n.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/360130376_758435239624674_4917307605991666596_n.jpg" alt="NOSK web dev">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/IMG_0967.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/IMG_0986.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/IMG_0987.jpg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day4/359713402_758435229624675_2561773104124155222_n.jpg" alt="NOSK web dev">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec-container" id="WebDevTrainingDay3">
+      <div class="heading">
+        <h1>Web Development Training - Day 3</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809022.jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (1).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (5).jpeg" alt="NOSK web dev">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (3).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (4).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (2).jpeg" alt="NOSK web dev">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (6).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023 (7).jpeg" alt="NOSK web dev">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day3/photo1688809023.jpeg" alt="NOSK web dev">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec-container" id="WebDevTrainingDay2">
+      <div class="heading">
+        <h1>QA as a career (WebDevTraining - Day 2)</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (1).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (2).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (3).jpeg" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (4).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (5).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (6).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/qa as a career (2).png" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (7).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811 (8).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day2/photo1688305811.jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec-container" id="WebDevTrainingDay1">
+      <div class="heading">
+        <h1>Web Development Training - Day 1</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697122 (1).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697122 (2).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697123 (3).jpeg" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697122 (3).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697122 (4).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697122 (5).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697123.jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697123 (4).jpeg" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697122.jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697123 (1).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day1/photo1687697123 (2).jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <section class="sec-container" id="WebDevTrainingDay0">
+      <div class="heading">
+        <h1>Kickoff Career in IT as a Project Manager; Is it right for Me?</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687103367 (5).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687103367.jpeg" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687103367 (1).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687103367 (2).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1686830530.jpeg" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687103367 (3).jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687077047.jpeg" alt="">
+          <img class = "view-image" loading="lazy" src="/site/images/gallery/WebDevTraining/Day0/photo1687103367 (4).jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-container" id="IntractiveSessionWithSeniors">
+      <div class="heading">
+        <h1>Experience exchange and Interactive session with seniors</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/6500BCC0-1B14-4465-AC4B-26D91401E45F_1_105_c.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/BBC4152B-C94F-4473-8A07-EE9CA7E03869_1_105_c.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/D6C38F34-F956-4F05-91C5-5822FD6D0EC2_1_105_c.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/IMG-20230522-WA0000.jpg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660895.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660895 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085 (6).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085 (5).jpeg" alt="">
+
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659997 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659997.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085 (4).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085 (3).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085 (2).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660085 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/IMG-20230522-WA0001.jpg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684591940.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661300 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661300 (2).jpeg" alt="">
+          
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661255.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684660896.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659913 (3).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659913 (4).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659913 (5).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659912.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659913 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659913 (2).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684659913.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661509.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661509 (2).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661509 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/IntractiveSessionWithSeniors/photo1684661300.jpeg" alt="">
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-container" id="OpenStreetMap">
+      <div class="heading">
+        <h1>Getting Started with OpenStartMap</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068432 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068412 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068412.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068432 (2).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068433 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068433 (2).jpeg" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068432 (3).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068432 (5).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068432 (6).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068432.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/getting_started_with_openstreetmap (2).png" alt="">
+        </div>
+        
+        <div class="img-col">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068442.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068442 (2).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068442 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068441 (1).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068433.jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068433 (4).jpeg" alt="">
+          <img class = "view-image" src="/site/images/gallery/OpenStreetMap/photo1684068433 (6).jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="sec-container" id="BRG_linux">
+      <div class="heading">
+        <h1>Open Source and Linux Workshop</h1>
+      </div>
+
+      <div class="box">
+        <div class="img-col">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675142199.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567713.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551.jpeg" alt="">
+        </div>
+
+        <div class="img-col">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509600.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675526474.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567714 (1).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509551 (2).jpeg" alt="">
+        </div>
+
+        <div class="img-col">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567715.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567714.jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675509600 (2).jpeg" alt="">
+          <img class = "view-image"src="/site/images/gallery/BRG_linux/photo1675567713 (1).jpeg" alt="">
+        </div>
+      </div>
+    </section>
+
+      <section class="sec-container" id="CH_programming">
+        <div class="heading">
+          <h1>Programming Journey with Open Source and Future of Programming Language</h1>
+        </div>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668491797.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600527 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600527.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600553.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600581.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600868.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600869.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601312.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601315.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601317.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601372 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668601372.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/CH_programming/photo1668600581 (1).jpeg" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-container" id="SP_linkedlist">
+        <div class="heading">
+          <h1>Linked List Implementation in Java</h1>
+        </div>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (2).jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1671809486.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051365.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (3).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/SP_linkedlist/photo1672051366 (1).jpeg" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-container" id="BP_linux">
+        <div class="heading">
+          <h1>Linux - The Revolution</h1>
+        </div>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672500360.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (1).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (4).jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (3).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (2).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672571807.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (6).jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451.jpeg" alt="">
+            <img class = "view-image"src="/site/images/gallery/BP_linux/photo1672568451 (5).jpeg" alt="">
+          </div>
+        </div>
+      </section>
+
+      <section class="sec-container" id="RD_gamedev">
+        <div class="heading">
+          <h1>Basics of Game Development</h1>
+        </div>
+
+        <div class="box">
+          <div class="img-col">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671152114 (1).jpeg" alt="">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671152114.jpeg" alt="">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671152118.jpeg" alt="">
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671025327.jpeg" alt="">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671184565 (1).jpeg" alt="">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671184565.jpeg" alt="">
+
+          </div>
+
+          <div class="img-col">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671119684.jpeg" alt="">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671091557.jpeg" alt="">
+            <img class = "view-image" src="/site/images/gallery/RD_gamedev/photo1671184585.jpeg" alt="">
+                <!-- Add more gallery sections here as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2025 Nepal Open Source Klub. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <button id="goToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile Navigation Toggle
+            const navToggleBtn = document.querySelector('.nav-toggle-btn');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggleBtn && navLinks) {
+                navToggleBtn.addEventListener('click', () => navLinks.classList.toggle('active'));
+            }
+
+            // Dark Mode
+            const darkModeToggle = document.querySelector('.dark-mode-toggle');
+            if (darkModeToggle) {
+                darkModeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = darkModeToggle.querySelector('i');
+                    const isDarkMode = document.body.classList.contains('dark-mode');
+                    icon.className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+                    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+                });
+
+                if (localStorage.getItem('darkMode') === 'enabled') {
+                    document.body.classList.add('dark-mode');
+                    darkModeToggle.querySelector('i').className = 'fas fa-sun';
+                }
+            }
+
+            // Go To Top Button
+            const goToTopBtn = document.getElementById("goToTopBtn");
+            if (goToTopBtn) {
+                window.onscroll = () => {
+                    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                        goToTopBtn.style.display = "block";
+                    } else {
+                        goToTopBtn.style.display = "none";
+                    }
+                };
+                goToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // Image Modal Functionality
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('modal-img');
+            const closeBtn = document.getElementById('close-btn');
+            const viewImages = document.querySelectorAll('.view-image');
+
+            viewImages.forEach(img => {
+                img.addEventListener('click', () => {
+                    modal.style.display = 'block';
+                    modalImg.src = img.src;
+                });
+            });
+
+            closeBtn.addEventListener('click', () => {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+
+            // ESC key to close modal
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.style.display === 'block') {
+                    modal.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
