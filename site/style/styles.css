@@ -1,0 +1,238 @@
+body {
+  background: url('https://images.unsplash.com/photo-1674582221299-3a930cbda1db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1935&q=80') no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.my-header {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.navbar {
+  margin: 15px;
+}
+
+.navbar-brand img {
+  float: left !important;
+}
+
+#nav-list {
+  height: 3rem;
+  margin-top: 10px;
+}
+
+#nav-list a {
+  color: #000000;
+  text-align: center;
+  /* font-size: 14px; */
+  /* height: 95%; */
+  /* margin-left: 1rem; */
+}
+
+#nav-list .active {
+  background-color: rgb(130, 173, 136);
+}
+.about-us:hover {
+  transition: 0.35s;
+  box-shadow:  2px 2px 2px #031d44;
+}
+
+
+
+/* hover effect on nav link add  */
+
+.nav-link {
+  font-weight: 500;
+  font-size: x-large;
+  text-decoration: none;
+  color: #031d44;
+  padding: 10px 0px;
+  margin-left: 1rem;
+  display: inline-block;
+  position: relative;
+  opacity: 0.75;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link::before {
+  transition: 300ms;
+  height: 3px;
+  content: "";
+  position: absolute;
+  background-color: #031d44;
+}
+
+.nav-link-ltr::before {
+  width: 0%;
+  bottom: 10px;
+}
+
+.nav-link-ltr:hover::before {
+  width: 100%;
+}
+
+/* hover effect on navlink end here   */
+
+.social-media a img:hover{
+    transition: 0.35s;
+    filter: drop-shadow(2px 2px 3px #031d44);  /*on hover social media shadow add*/
+}
+
+.brand-name {
+  font-family: "Alfa Slab One", "serif";
+  font-size: 4.5rem;
+  text-align: right;
+  line-height: 0.5;
+  font-weight: 300;
+  letter-spacing: 1px;
+  position: relative;
+  color: green;
+}
+
+.description-text {
+  font-family: "Unbounded", cursive;
+  border-right: 0.15em solid black;
+  /* The cursor */
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  font-weight: 250;
+  line-height: 2;
+  font-size: 2rem;
+  text-align: center;
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+.brand-about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+}
+
+#announcement {
+  font-size: 25px;
+}
+
+.event-title {
+  font-size: 30px;
+}
+
+.event-title:hover {
+  background-color: antiquewhite;
+  font-size: 30px;
+}
+
+.jumbotron {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px;
+  margin: 30px;
+}
+
+.jumbotron a {
+  text-decoration: none;
+}
+
+/* Text beneath club logo*/
+.fullform {
+  position: relative;
+  margin-top: -30px;
+  font-size: 12px;
+}
+
+.about-us {
+  padding: 10px;
+  font-size: 22px;
+  background-color: rgb(15, 47, 84);
+  color: white;
+  border-radius: 5px;
+}
+
+.about-us a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.about-us:hover {
+  background-color: #25a0c6;
+  cursor: pointer;
+  border: 1 px solid white;
+}
+
+.our-info {
+  padding: 5px;
+  margin: 15px;
+}
+
+/* BACK to top button  */
+#btn-back-to-top {
+  
+  z-index: 99;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+  #btn-back-to-top {
+      bottom: 10px;
+      right: 10px;
+      padding: 10px;
+      font-size: 16px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-collapse {
+    transition: visibility 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  }
+}
+
+/* mobile screen */
+@media (max-width: 450px) {
+  .event-title {
+    background-color: antiquewhite;
+  }
+
+  .description-text {
+    line-height: 1.25;
+    font-size: 1.25rem;
+    margin-top: 8px;
+  }
+}
